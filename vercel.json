@@ -5,5 +5,16 @@
       "source": "/((?!_framework|css|images).*)",
       "destination": "/index.html"
     }
+  ],
+  "headers": [
+    {
+      "source": "/_framework/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-transform"
+        }
+      ]
+    }
   ]
 }
