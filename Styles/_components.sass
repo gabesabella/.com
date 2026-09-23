@@ -1,8 +1,11 @@
 @use 'variables' as v 
+
+body 
+  background: v.$color-primary !important
+
 .wrapper
   display: flex
   justify-content: center
-  background: v.$color-primary !important
 
 .active
   background: #ad8d
@@ -32,7 +35,7 @@
 
   p
     font-size: 2rem
-    line-height: 3.5rem
+    line-height: 3rem
     &:not(:first-child)
       padding-top: 3rem
     &:first-child
