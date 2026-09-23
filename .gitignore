@@ -2,6 +2,9 @@
 bin/
 obj/
 
+# Allow the specific published files to be pushed to GitHub
+!bin/Release/net10.0/publish/wwwroot/
+
 ## Standard Publish and Deployment Outputs
 publish/
 **/AppPackages/
