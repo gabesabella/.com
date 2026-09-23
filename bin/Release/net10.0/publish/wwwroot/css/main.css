@@ -89,10 +89,13 @@ html.dark {
     transform: rotate(360deg);
   }
 }
+body {
+  background: #0d0a1a !important;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
-  background: #0d0a1a !important;
 }
 
 .active {
@@ -135,7 +138,7 @@ html.dark {
 }
 .intro p {
   font-size: 2rem;
-  line-height: 3.5rem;
+  line-height: 3rem;
 }
 .intro p:not(:first-child) {
   padding-top: 3rem;
