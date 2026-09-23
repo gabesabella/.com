@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/_framework/(.*)",
+      "destination": "/_framework/$1"
+    },
+    {
       "source": "/((?!_framework|css|images).*)",
       "destination": "/index.html"
     }
@@ -12,7 +16,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-transform"
+          "value": "no-transform, max-age=31536000"
         }
       ]
     }
