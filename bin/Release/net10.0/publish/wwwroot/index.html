@@ -1,69 +1,64 @@
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2027_Portfolio</title>
     <base href="/" />
-    <link href="_framework/dotnet.1iqwkgogpt.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-111Tdiez/5bsPAsKBtfYAznL0TfOyTY2aQfH/zo0T7E=" />
+    <link href="_framework/dotnet.1zk8czndf9.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-0zsbKxf6J9uqrcMAotWdPJ9vQQuOSlWc/Ym8aHbaHUQ=" />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.1iqwkgogpt.js",
-    "./_framework/dotnet.native.js": "./_framework/dotnet.native.ykrnppwhq2.js",
-    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.peu2mfb29t.js"
+    "./_framework/dotnet.js": "./_framework/dotnet.1zk8czndf9.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.b6l13xorvf.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js"
   },
   "scopes": {},
   "integrity": {
     "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
     "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
-    "./_framework/dotnet.1iqwkgogpt.js": "sha256-111Tdiez/5bsPAsKBtfYAznL0TfOyTY2aQfH/zo0T7E=",
-    "./_framework/dotnet.js": "sha256-111Tdiez/5bsPAsKBtfYAznL0TfOyTY2aQfH/zo0T7E=",
-    "./_framework/dotnet.native.js": "sha256-nheeN4H7Js+avp9nd/sQxdaehbeEx3qriXjiZ3pSw6U=",
-    "./_framework/dotnet.native.ykrnppwhq2.js": "sha256-nheeN4H7Js+avp9nd/sQxdaehbeEx3qriXjiZ3pSw6U=",
-    "./_framework/dotnet.runtime.js": "sha256-cajUr4vA/MpLPWj3omULUOwEQw3i8CE2n8AmDheqWBM=",
-    "./_framework/dotnet.runtime.peu2mfb29t.js": "sha256-cajUr4vA/MpLPWj3omULUOwEQw3i8CE2n8AmDheqWBM="
+    "./_framework/dotnet.1zk8czndf9.js": "sha256-0zsbKxf6J9uqrcMAotWdPJ9vQQuOSlWc/Ym8aHbaHUQ=",
+    "./_framework/dotnet.js": "sha256-0zsbKxf6J9uqrcMAotWdPJ9vQQuOSlWc/Ym8aHbaHUQ=",
+    "./_framework/dotnet.native.b6l13xorvf.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.native.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds="
   }
 }</script>
   </head>
-
   <body>
-    <div id="app">
-      <svg class="loading-progress">
-        <circle r="40%" cx="50%" cy="50%" />
-        <circle r="40%" cx="50%" cy="50%" />
-      </svg>
-      <div class="loading-progress-text"></div>
-    </div>
+	  <div id="app">
+		  <div class="loading-wrapper">
+			  <div class="spinner"></div>
+		  </div>
+	  </div>
+	  <script>
+          function observeElementById(sectionId, navId) {
+            const sectionElement = document.getElementById(sectionId);
+            const navElement = document.getElementById(navId);
 
-    <script>
-      function observeElementById(sectionId, navId) {
-        const sectionElement = document.getElementById(sectionId);
-        const navElement = document.getElementById(navId);
+            const options = {
+              root: null, // defaults to the viewport
+              rootMargin: '-200px 0px -800px 0px', // shrinks the bottom boundary by 100px
+              threshold: 0,
+            };
 
-        const options = {
-          root: null, // defaults to the viewport
-          rootMargin: '-200px 0px -800px 0px', // shrinks the bottom boundary by 100px
-          threshold: 0,
-        };
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  console.log(`${sectionId} is in view!`);
+                  navElement.classList.add('active');
+                } else {
+                  console.log(`${sectionId} is out of view`);
+                  navElement.classList.remove('active');
+                }
+              });
+            }, options);
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              console.log(`${sectionId} is in view!`);
-              navElement.classList.add('active');
-            } else {
-              console.log(`${sectionId} is out of view`);
-              navElement.classList.remove('active');
-            }
-          });
-        }, options);
-
-        observer.observe(sectionElement);
-      }
+            observer.observe(sectionElement);
+          }
     </script>
     <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
   </body>
