@@ -13,13 +13,10 @@
   </head>
   <body>
     <div id="boot-screen">
-      <pre id="boot-log"></pre><span class="boot-cursor">_</span>
+      <pre id="boot-log"></pre>
+      <span class="boot-cursor">_</span>
     </div>
-    <div id="app">
-      <div class="loading-wrapper">
-        <div class="spinner"></div>
-      </div>
-    </div>
+    <div id="app"></div>
     <script>
       function observeElementById(sectionId, navId) {
         const sectionElement = document.getElementById(sectionId);
@@ -42,12 +39,15 @@
             }
           });
         }, options);
-    
+
         observer.observe(sectionElement);
       }
     </script>
     <script src="js/boot.js"></script>
-    <script src="_framework/blazor.webassembly#[.{fingerprint}].js" autostart="false"></script>
+    <script
+      src="_framework/blazor.webassembly#[.{fingerprint}].js"
+      autostart="false"
+    ></script>
     <script>
       Blazor.start().then(() => {
         if (window.__bootReveal) window.__bootReveal();
