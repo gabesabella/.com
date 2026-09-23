@@ -1,0 +1,37 @@
+@page "/"
+@inject IJSRuntime JS;
+
+@using System.Runtime.InteropServices
+@using _2027_Portfolio.Components.Pages.comps
+
+<body>
+    <div class="wrapper">
+        <div class="main-layout">
+            <Header />
+            <div class="main-content">
+                <Intro/>
+                <Experience />
+                <Projects />
+                <BuiltWith />
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+@code {
+      protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Calls window.yourJsFunction("Hello World")
+            await JS.InvokeVoidAsync("observeElementById", "intro", "nav-intro");
+            await JS.InvokeVoidAsync("observeElementById", "experience", "nav-experience");
+            await JS.InvokeVoidAsync("observeElementById", "projects", "nav-projects");
+            @* await JS.InvokeVoidAsync("observeElementById", "contact", "nav-contact"); *@
+        }
+    }
+}
+

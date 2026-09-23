@@ -1,0 +1,281 @@
+html,
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: #080808;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #a5a5a5;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 1rem 0 0 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 10rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.main-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding: 4rem 3rem 0 3rem;
+  max-width: 1400px;
+}
+@media (max-width: 1200px) {
+  .main-layout {
+    font-size: 2rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.main-content {
+  min-width: 50%;
+}
+
+.intro {
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .intro {
+    padding-top: 4rem;
+  }
+}
+.intro p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.intro p:not(:first-child) {
+  padding-top: 3rem;
+}
+
+.header-container {
+  min-width: 50%;
+  position: relative;
+}
+.header-container .header {
+  position: fixed;
+}
+@media (max-width: 1200px) {
+  .header-container .header {
+    display: block;
+    position: unset;
+  }
+}
+.header-container .header h1 {
+  max-width: 50%;
+  font-size: 15rem;
+}
+@media (max-width: 1200px) {
+  .header-container .header h1 {
+    font-size: 5rem;
+    max-width: 100%;
+  }
+}
+.header-container .header h2 {
+  padding: 0;
+  max-width: 50%;
+}
+@media (max-width: 1200px) {
+  .header-container .header h2 {
+    max-width: 100%;
+    font-size: 3rem;
+  }
+}
+.header-container .header h2:first-of-type {
+  padding-top: 4rem;
+}
+@media (max-width: 1200px) {
+  .header-container .header h2:first-of-type {
+    padding-top: 2rem;
+  }
+}
+
+.experiences,
+.projects {
+  padding-top: 10rem;
+}
+@media (max-width: 1200px) {
+  .experiences,
+  .projects {
+    padding-top: 2rem;
+  }
+}
+.experiences .link,
+.projects .link {
+  position: absolute;
+  inset: -1rem -2rem;
+  z-index: 5;
+}
+.experiences .image img,
+.projects .image img {
+  width: auto;
+  height: 100px;
+}
+@media (max-width: 1200px) {
+  .experiences .image img,
+  .projects .image img {
+    display: none;
+  }
+}
+.experiences .image img,
+.projects .image img {
+  border-radius: 0.5rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border: 2px solid #003246;
+}
+.experiences .exp-item-wrapper,
+.projects .exp-item-wrapper {
+  position: relative;
+  margin-top: 4rem;
+  padding: 1rem;
+}
+.experiences .exp-item-wrapper .expand,
+.projects .exp-item-wrapper .expand {
+  position: absolute;
+  inset: -1rem -2rem;
+  background: #2e2e2e;
+  border-radius: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+.experiences .exp-item-wrapper .exp-item,
+.projects .exp-item-wrapper .exp-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1200px) {
+  .experiences .exp-item-wrapper .exp-item,
+  .projects .exp-item-wrapper .exp-item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.experiences .exp-item-wrapper .exp-item,
+.projects .exp-item-wrapper .exp-item {
+  position: relative;
+}
+.experiences .exp-item-wrapper .exp-item .exp-time,
+.projects .exp-item-wrapper .exp-item .exp-time {
+  min-width: 20%;
+  font-size: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .experiences .exp-item-wrapper .exp-item .exp-time,
+  .projects .exp-item-wrapper .exp-item .exp-time {
+    font-size: 1.8rem;
+  }
+}
+.experiences .exp-item-wrapper .exp-item .exp-time,
+.projects .exp-item-wrapper .exp-item .exp-time {
+  font-weight: 700;
+}
+.experiences .exp-item-wrapper .exp-item .exp-info,
+.projects .exp-item-wrapper .exp-item .exp-info {
+  width: auto;
+  padding-left: 2rem;
+}
+@media (max-width: 1200px) {
+  .experiences .exp-item-wrapper .exp-item .exp-info,
+  .projects .exp-item-wrapper .exp-item .exp-info {
+    padding: 0;
+  }
+}
+.experiences .exp-item-wrapper .exp-item .exp-info .title,
+.projects .exp-item-wrapper .exp-item .exp-info .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.experiences .exp-item-wrapper .exp-item .exp-info .desc,
+.projects .exp-item-wrapper .exp-item .exp-info .desc {
+  line-height: 2rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+.experiences .exp-item-wrapper .exp-item .exp-info .exp-tech,
+.projects .exp-item-wrapper .exp-item .exp-info .exp-tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.experiences .exp-item-wrapper .exp-item .exp-info .exp-tech .tech-icon,
+.projects .exp-item-wrapper .exp-item .exp-info .exp-tech .tech-icon {
+  background: #003246;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: chartreuse;
+}
+.experiences .resume-link,
+.projects .resume-link {
+  padding-top: 4rem;
+}
+.experiences .resume-link a:link,
+.experiences a:visited,
+.experiences a:active,
+.projects .resume-link a:link,
+.projects a:visited,
+.projects a:active {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+.experiences .exp-item-wrapper:hover .expand,
+.projects .exp-item-wrapper:hover .expand {
+  opacity: 1;
+}
+
+.built-with {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  padding-top: 10rem;
+  font-size: 1.5rem;
+}

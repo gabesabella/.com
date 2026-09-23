@@ -1,0 +1,27 @@
+## Core .NET Build Outputs
+bin/
+obj/
+
+## Standard Publish and Deployment Outputs
+publish/
+**/AppPackages/
+
+## IDE and Editor Settings
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-Specific Files
+*.userprefs
+*.pidb
+
+## Front-end Tooling (if you use Tailwind, Bootstrap, npm, etc.)
+node_modules/
+.sass-cache/
+
+## Operating System Files
+Thumbs.db
+.DS_Store
