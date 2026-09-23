@@ -6,7 +6,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
+    <WasmFingerprintAssets>true</WasmFingerprintAssets>
+    <WasmApplicationEnvironmentName>Production</WasmApplicationEnvironmentName>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.SassCompiler" Version="1.103.0" />
