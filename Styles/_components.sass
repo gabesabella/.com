@@ -3,6 +3,11 @@
 body 
   background: v.$color-primary !important
 
+.resume-link 
+    font-family: monspace
+    margin-bottom: 3rem
+    text-decoration: underline
+    
 .wrapper
   display: flex
   justify-content: center
@@ -10,8 +15,9 @@ body
 .active
   background: #ad8d
   color: black !important
-  margin: 0 1rem
   transition: margin .2s ease-in-out
+  margin: 0 1rem
+
 .main-layout
   display: flex
   gap: 1rem
@@ -40,6 +46,8 @@ body
       padding-top: 3rem
     &:first-child
       padding-top: 12rem
+      @media (max-width: v.$breakpoint)
+        padding-top: 2rem
          
     
 .bold 
@@ -49,13 +57,15 @@ body
 .header-container
   position: relative
   width: 45%
-  
+  @media (max-width: v.$breakpoint)
+    width: 100%
   .header
     transform: translateY(12.5rem)
     position: fixed
     @media (max-width: v.$breakpoint)
       display: block
       position: unset
+      transform: unset
   .flex 
     gap: 2rem
     display: flex
@@ -98,15 +108,24 @@ body
         &:hover 
           margin: .5rem
 
-
+.beacon
+    display: flex !important
+    flex-direction: column !important
+    gap: 1rem
     
     
 .experience, .projects
-  padding-top: v.$p-md
-  // transform: translateY(20rem)
+  padding-top: v.$p-sm
 
-  @media (max-width: v.$breakpoint)
-    padding-top: v.$p-sm
+
+  #beacon
+    min-width: 60rem
+    @media (max-width: v.$breakpoint)
+      min-width: unset
+      
+  img 
+    max-width: 275px
+      
 
   .link
     position: absolute
@@ -136,10 +155,17 @@ body
       flex-wrap: wrap
       position: relative
       width: 100%
+      gap: 1rem
+
+    .beacon 
+      display: flex
+      flex-direction: column
+      gap: 2rem
 
     .exp-time
       min-width: 20%
       font-size: 1.5rem
+      font-familyl: monospace
       @media (max-width: v.$breakpoint)
         font-size: 1.8rem
 
@@ -152,7 +178,7 @@ body
         padding: 0
 
       .title
-        font-size: 1.5rem
+        font-size: 2rem
         font-weight: 700
         text-align: left
 
@@ -176,13 +202,21 @@ body
           font-size: 1.3rem
 
           background: rgb(2, 37, 31)
-.resume-link
+.resume-link 
   padding-top: 4rem
+  
+  a
+    font-family: monospace
+    font-size: 2rem
+
+  @media (max-width: v.$breakpoint)
+    font-size: 1.5rem  
+
 
 .resume-link a:link, a:visited
-  font-size: 1.5rem
   text-decoration: none
   color: inherit
+
 
 .exp-item-wrapper:hover .expand
   opacity: .1
@@ -192,6 +226,7 @@ body
   place-items: center
   padding-top: 3rem
   font-size: 1.5rem
+  font-family: monospace
 
 .menu
   font-size: 6rem
@@ -207,7 +242,7 @@ a
   outline: none
   padding-bottom: 1rem
   text-align: center
-  // border-bottom: 2px solid v.$color-primary
+  font-family: monospace
 
   ul
     display: flex
