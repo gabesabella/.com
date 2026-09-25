@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/boot.css" />
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
@@ -48,8 +49,10 @@
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
+              console.log(`${sectionId} is in view!`);
               navElement.classList.add('active');
             } else {
+              console.log(`${sectionId} is out of view`);
               navElement.classList.remove('active');
             }
           });

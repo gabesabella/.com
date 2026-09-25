@@ -14,10 +14,13 @@
     {
       "source": "/_framework/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-transform, max-age=31536000"
-        }
+        { "key": "Cache-Control", "value": "no-transform, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/_framework/blazor.boot.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
       ]
     }
   ]
