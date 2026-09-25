@@ -12,21 +12,15 @@
   ],
   "headers": [
     {
-      "source": "/_framework/blazor.boot.json",
+      "source": "/_framework/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-transform, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/_framework/(?!blazor\\.boot\\.json)(.*)",
+      "source": "/_framework/blazor.boot.json",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-transform, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
       ]
     }
   ]
