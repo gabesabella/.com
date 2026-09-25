@@ -52,10 +52,8 @@
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              console.log(`${sectionId} is in view!`);
               navElement.classList.add('active');
             } else {
-              console.log(`${sectionId} is out of view`);
               navElement.classList.remove('active');
             }
           });

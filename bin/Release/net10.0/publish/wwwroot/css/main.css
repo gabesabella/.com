@@ -15055,19 +15055,26 @@ a:link, a:visited {
   margin: 0 1rem;
 }
 
-.experience .exp-item-wrapper:hover .expand,
-.projects .exp-item-wrapper:hover .expand {
-  opacity: 0.1;
-}
-.experience .link,
-.projects .link {
-  position: absolute;
-  inset: -1rem -2rem;
-  z-index: 5;
-}
-.experience .expand,
-.projects .expand {
-  inset: -1rem -2rem;
+@media (min-width: 768px) {
+  .experience .exp-item,
+  .projects .exp-item {
+    flex-direction: row;
+  }
+  .experience .exp-item .exp-info,
+  .projects .exp-item .exp-info {
+    padding-left: 2rem;
+    padding-top: 0;
+  }
+  .experience .exp-item .image,
+  .projects .exp-item .image {
+    width: auto;
+    flex-shrink: 0;
+  }
+  .experience .exp-item img,
+  .projects .exp-item img {
+    width: auto;
+    max-width: 275px;
+  }
 }
 
 .projects #beacon {
@@ -15076,6 +15083,22 @@ a:link, a:visited {
 @media (max-width: 1000px) {
   .projects #beacon {
     min-width: unset;
+  }
+}
+@media (min-width: 768px) {
+  .projects .exp-item:has(#beacon) {
+    flex-direction: column;
+  }
+  .projects .exp-item:has(#beacon) .image {
+    width: 100%;
+  }
+  .projects .exp-item:has(#beacon) img {
+    width: 100%;
+    max-width: unset;
+  }
+  .projects .exp-item:has(#beacon) .exp-info {
+    padding-left: 0;
+    padding-top: 2rem;
   }
 }
 

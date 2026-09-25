@@ -690,27 +690,43 @@ a:link, a:visited
 .experience,
 .projects
 
-  // Hover reveal — sibling selector, can't be a utility
-  .exp-item-wrapper:hover .expand
-    opacity: 0.1
+  .exp-item
+    +md
+      flex-direction: row
 
-  // Custom inset value not in spacing scale
-  .link
-    position: absolute
-    inset: -1rem -2rem
-    z-index: 5
+      .exp-info
+        padding-left: $spacing-8
+        padding-top: 0
 
-  .expand
-    inset: -1rem -2rem
+      .image
+        width: auto
+        flex-shrink: 0
 
+      img
+        width: auto
+        max-width: 275px
 
 // ── Projects only ────────────────────────────────────────────
 .projects
-
   #beacon
     min-width: 60rem
     @media (max-width: $breakpoint)
       min-width: unset
+
+  .exp-item:has(#beacon)
+    +md
+      flex-direction: column
+
+      .image
+        width: 100%
+
+      img
+        width: 100%
+        max-width: unset
+
+      .exp-info
+        padding-left: 0
+        padding-top: $spacing-8
 
 // ── Tech icon ────────────────────────────────────────────────
 .tech-icon
