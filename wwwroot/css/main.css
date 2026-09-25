@@ -143,11 +143,6 @@ body {
 .intro {
   position: relative;
 }
-@media (max-width: 1000px) {
-  .intro {
-    padding-top: 4rem;
-  }
-}
 .intro p {
   font-size: 2rem;
   line-height: 3rem;
@@ -345,6 +340,11 @@ body {
 
 .resume-link {
   padding-top: 4rem;
+}
+@media (max-width: 1000px) {
+  .resume-link {
+    padding-top: 2rem;
+  }
 }
 .resume-link a {
   font-family: monospace;

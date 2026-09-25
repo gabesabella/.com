@@ -36,9 +36,6 @@ body
 .intro 
   position: relative
   
-  @media (max-width: v.$breakpoint)
-    padding-top: v.$p-md
-
   p
     font-size: 2rem
     line-height: 3rem
@@ -204,6 +201,8 @@ body
           background: rgb(2, 37, 31)
 .resume-link 
   padding-top: 4rem
+  @media (max-width: v.$breakpoint)
+    padding-top: 2rem
   
   a
     font-family: monospace
