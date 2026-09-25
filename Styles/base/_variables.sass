@@ -1,0 +1,361 @@
+@import url('https://googleapis.com')
+
+// ============================================================
+// TAILWIND-SASS: Variables & Design Tokens
+// ============================================================
+$color-primary: #0d0a1a
+$color-text-default: #a5a5a5
+$color-primary-light: #003246
+$dev: orangered
+$p-lg: 10rem
+$p-md: 4rem
+$p-sm: 2rem
+$breakpoint: 1000px
+// ------------------------------------------------------------
+// Spacing Scale (matches Tailwind's default scale)
+// ------------------------------------------------------------
+$spacing-0:    0
+$spacing-px:   1px
+$spacing-0_5:  0.125rem
+$spacing-1:    0.25rem
+$spacing-1_5:  0.375rem
+$spacing-2:    0.5rem
+$spacing-2_5:  0.625rem
+$spacing-3:    0.75rem
+$spacing-3_5:  0.875rem
+$spacing-4:    1rem
+$spacing-5:    1.25rem
+$spacing-6:    1.5rem
+$spacing-7:    1.75rem
+$spacing-8:    2rem
+$spacing-9:    2.25rem
+$spacing-10:   2.5rem
+$spacing-11:   2.75rem
+$spacing-12:   3rem
+$spacing-14:   3.5rem
+$spacing-16:   4rem
+$spacing-20:   5rem
+$spacing-24:   6rem
+$spacing-28:   7rem
+$spacing-32:   8rem
+$spacing-36:   9rem
+$spacing-40:   10rem
+$spacing-44:   11rem
+$spacing-48:   12rem
+$spacing-52:   13rem
+$spacing-56:   14rem
+$spacing-60:   15rem
+$spacing-64:   16rem
+$spacing-72:   18rem
+$spacing-80:   20rem
+$spacing-96:   24rem
+
+$spacing: ("0": $spacing-0, "px": $spacing-px, "0_5": $spacing-0_5, "1": $spacing-1, "1_5": $spacing-1_5, "2": $spacing-2, "2_5": $spacing-2_5, "3": $spacing-3, "3_5": $spacing-3_5, "4": $spacing-4, "5": $spacing-5, "6": $spacing-6, "7": $spacing-7, "8": $spacing-8, "9": $spacing-9, "10": $spacing-10, "12": $spacing-12, "14": $spacing-14, "16": $spacing-16, "20": $spacing-20, "24": $spacing-24, "32": $spacing-32, "40": $spacing-40, "48": $spacing-48, "56": $spacing-56, "64": $spacing-64, "72": $spacing-72, "80": $spacing-80, "96": $spacing-96)
+
+// ------------------------------------------------------------
+// Color Palette (Tailwind v3 default)
+// ------------------------------------------------------------
+
+// Slate
+$slate-50:  #f8fafc
+$slate-100: #f1f5f9
+$slate-200: #e2e8f0
+$slate-300: #cbd5e1
+$slate-400: #94a3b8
+$slate-500: #64748b
+$slate-600: #475569
+$slate-700: #334155
+$slate-800: #1e293b
+$slate-900: #0f172a
+$slate-950: #020617
+
+// Gray
+$gray-50:   #f9fafb
+$gray-100:  #f3f4f6
+$gray-200:  #e5e7eb
+$gray-300:  #d1d5db
+$gray-400:  #9ca3af
+$gray-500:  #6b7280
+$gray-600:  #4b5563
+$gray-700:  #374151
+$gray-800:  #1f2937
+$gray-900:  #111827
+$gray-950:  #030712
+
+// Zinc
+$zinc-50:   #fafafa
+$zinc-100:  #f4f4f5
+$zinc-200:  #e4e4e7
+$zinc-300:  #d4d4d8
+$zinc-400:  #a1a1aa
+$zinc-500:  #71717a
+$zinc-600:  #52525b
+$zinc-700:  #3f3f46
+$zinc-800:  #27272a
+$zinc-900:  #18181b
+$zinc-950:  #09090b
+
+// Red
+$red-50:   #fef2f2
+$red-100:  #fee2e2
+$red-200:  #fecaca
+$red-300:  #fca5a5
+$red-400:  #f87171
+$red-500:  #ef4444
+$red-600:  #dc2626
+$red-700:  #b91c1c
+$red-800:  #991b1b
+$red-900:  #7f1d1d
+$red-950:  #450a0a
+
+// Orange
+$orange-50:   #fff7ed
+$orange-100:  #ffedd5
+$orange-200:  #fed7aa
+$orange-300:  #fdba74
+$orange-400:  #fb923c
+$orange-500:  #f97316
+$orange-600:  #ea580c
+$orange-700:  #c2410c
+$orange-800:  #9a3412
+$orange-900:  #7c2d12
+$orange-950:  #431407
+
+// Amber
+$amber-50:   #fffbeb
+$amber-100:  #fef3c7
+$amber-200:  #fde68a
+$amber-300:  #fcd34d
+$amber-400:  #fbbf24
+$amber-500:  #f59e0b
+$amber-600:  #d97706
+$amber-700:  #b45309
+$amber-800:  #92400e
+$amber-900:  #78350f
+$amber-950:  #451a03
+
+// Yellow
+$yellow-50:   #fefce8
+$yellow-100:  #fef9c3
+$yellow-200:  #fef08a
+$yellow-300:  #fde047
+$yellow-400:  #facc15
+$yellow-500:  #eab308
+$yellow-600:  #ca8a04
+$yellow-700:  #a16207
+$yellow-800:  #854d0e
+$yellow-900:  #713f12
+$yellow-950:  #422006
+
+// Green
+$green-50:   #f0fdf4
+$green-100:  #dcfce7
+$green-200:  #bbf7d0
+$green-300:  #86efac
+$green-400:  #4ade80
+$green-500:  #22c55e
+$green-600:  #16a34a
+$green-700:  #15803d
+$green-800:  #166534
+$green-900:  #14532d
+$green-950:  #052e16
+
+// Teal
+$teal-50:   #f0fdfa
+$teal-100:  #ccfbf1
+$teal-200:  #99f6e4
+$teal-300:  #5eead4
+$teal-400:  #2dd4bf
+$teal-500:  #14b8a6
+$teal-600:  #0d9488
+$teal-700:  #0f766e
+$teal-800:  #115e59
+$teal-900:  #134e4a
+$teal-950:  #042f2e
+
+// Blue
+$blue-50:   #eff6ff
+$blue-100:  #dbeafe
+$blue-200:  #bfdbfe
+$blue-300:  #93c5fd
+$blue-400:  #60a5fa
+$blue-500:  #3b82f6
+$blue-600:  #2563eb
+$blue-700:  #1d4ed8
+$blue-800:  #1e40af
+$blue-900:  #1e3a8a
+$blue-950:  #172554
+
+// Indigo
+$indigo-50:   #eef2ff
+$indigo-100:  #e0e7ff
+$indigo-200:  #c7d2fe
+$indigo-300:  #a5b4fc
+$indigo-400:  #818cf8
+$indigo-500:  #6366f1
+$indigo-600:  #4f46e5
+$indigo-700:  #4338ca
+$indigo-800:  #3730a3
+$indigo-900:  #312e81
+$indigo-950:  #1e1b4b
+
+// Violet
+$violet-50:   #f5f3ff
+$violet-100:  #ede9fe
+$violet-200:  #ddd6fe
+$violet-300:  #c4b5fd
+$violet-400:  #a78bfa
+$violet-500:  #8b5cf6
+$violet-600:  #7c3aed
+$violet-700:  #6d28d9
+$violet-800:  #5b21b6
+$violet-900:  #4c1d95
+$violet-950:  #2e1065
+
+// Pink
+$pink-50:   #fdf2f8
+$pink-100:  #fce7f3
+$pink-200:  #fbcfe8
+$pink-300:  #f9a8d4
+$pink-400:  #f472b6
+$pink-500:  #ec4899
+$pink-600:  #db2777
+$pink-700:  #be185d
+$pink-800:  #9d174d
+$pink-900:  #831843
+$pink-950:  #500724
+
+// Neutrals
+$white: #ffffff
+$black: #000000
+$transparent: transparent
+
+// Color map for utility generation
+$colors: ("slate": ("50": $slate-50, "100": $slate-100, "200": $slate-200, "300": $slate-300, "400": $slate-400, "500": $slate-500, "600": $slate-600, "700": $slate-700, "800": $slate-800, "900": $slate-900), "gray": ("50": $gray-50, "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), "red": ("50": $red-50, "100": $red-100, "200": $red-200, "300": $red-300, "400": $red-400, "500": $red-500, "600": $red-600, "700": $red-700, "800": $red-800, "900": $red-900), "orange": ("50": $orange-50, "100": $orange-100, "200": $orange-200, "300": $orange-300, "400": $orange-400, "500": $orange-500, "600": $orange-600, "700": $orange-700, "800": $orange-800, "900": $orange-900), "amber": ("50": $amber-50, "100": $amber-100, "200": $amber-200, "300": $amber-300, "400": $amber-400, "500": $amber-500, "600": $amber-600, "700": $amber-700, "800": $amber-800, "900": $amber-900), "yellow": ("50": $yellow-50, "100": $yellow-100, "200": $yellow-200, "300": $yellow-300, "400": $yellow-400, "500": $yellow-500, "600": $yellow-600, "700": $yellow-700, "800": $yellow-800, "900": $yellow-900), "green": ("50": $green-50, "100": $green-100, "200": $green-200, "300": $green-300, "400": $green-400, "500": $green-500, "600": $green-600, "700": $green-700, "800": $green-800, "900": $green-900), "teal": ("50": $teal-50, "100": $teal-100, "200": $teal-200, "300": $teal-300, "400": $teal-400, "500": $teal-500, "600": $teal-600, "700": $teal-700, "800": $teal-800, "900": $teal-900), "blue": ("50": $blue-50, "100": $blue-100, "200": $blue-200, "300": $blue-300, "400": $blue-400, "500": $blue-500, "600": $blue-600, "700": $blue-700, "800": $blue-800, "900": $blue-900), "indigo": ("50": $indigo-50, "100": $indigo-100, "200": $indigo-200, "300": $indigo-300, "400": $indigo-400, "500": $indigo-500, "600": $indigo-600, "700": $indigo-700, "800": $indigo-800, "900": $indigo-900), "violet": ("50": $violet-50, "100": $violet-100, "200": $violet-200, "300": $violet-300, "400": $violet-400, "500": $violet-500, "600": $violet-600, "700": $violet-700, "800": $violet-800, "900": $violet-900), "pink": ("50": $pink-50, "100": $pink-100, "200": $pink-200, "300": $pink-300, "400": $pink-400, "500": $pink-500, "600": $pink-600, "700": $pink-700, "800": $pink-800, "900": $pink-900))
+
+// ------------------------------------------------------------
+// Typography
+// ------------------------------------------------------------
+$font-sans:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+$font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+$font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+$font-roboto: ui-sans-serif, 'Roboto', sans-serif
+
+$font-size-xs:   0.75rem
+$font-size-sm:   0.875rem
+$font-size-base: 1rem
+$font-size-lg:   1.125rem
+$font-size-xl:   1.25rem
+$font-size-2xl:  1.5rem
+$font-size-3xl:  1.875rem
+$font-size-4xl:  2.25rem
+$font-size-5xl:  3rem
+$font-size-6xl:  3.75rem
+$font-size-7xl:  4.5rem
+$font-size-8xl:  6rem
+$font-size-9xl:  8rem
+
+$line-height-none:    1
+$line-height-tight:   1.25
+$line-height-snug:    1.375
+$line-height-normal:  1.5
+$line-height-relaxed: 1.625
+$line-height-loose:   2
+
+$font-weight-thin:       100
+$font-weight-extralight: 200
+$font-weight-light:      300
+$font-weight-normal:     400
+$font-weight-medium:     500
+$font-weight-semibold:   600
+$font-weight-bold:       700
+$font-weight-extrabold:  800
+$font-weight-black:      900
+
+$letter-spacing-tighter: -0.05em
+$letter-spacing-tight:   -0.025em
+$letter-spacing-normal:  0em
+$letter-spacing-wide:    0.025em
+$letter-spacing-wider:   0.05em
+$letter-spacing-widest:  0.1em
+
+// ------------------------------------------------------------
+// Border Radius
+// ------------------------------------------------------------
+$rounded-none:   0
+$rounded-sm:     0.125rem
+$rounded:        0.25rem
+$rounded-md:     0.375rem
+$rounded-lg:     0.5rem
+$rounded-xl:     0.75rem
+$rounded-2xl:    1rem
+$rounded-3xl:    1.5rem
+$rounded-full:   9999px
+
+// ------------------------------------------------------------
+// Shadows
+// ------------------------------------------------------------
+$shadow-sm:     0 1px 2px 0 rgb(0 0 0 / 0.05)
+$shadow:        0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)
+$shadow-md:     0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+$shadow-lg:     0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)
+$shadow-xl:     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)
+$shadow-2xl:    0 25px 50px -12px rgb(0 0 0 / 0.25)
+$shadow-inner:  inset 0 2px 4px 0 rgb(0 0 0 / 0.05)
+$shadow-none:   none
+
+// ------------------------------------------------------------
+// Breakpoints
+// ------------------------------------------------------------
+$screen-sm:  640px
+$screen-md:  768px
+$screen-lg:  1024px
+$screen-xl:  1280px
+$screen-2xl: 1536px
+
+// ------------------------------------------------------------
+// Z-Index
+// ------------------------------------------------------------
+$z-0:    0
+$z-10:   10
+$z-20:   20
+$z-30:   30
+$z-40:   40
+$z-50:   50
+$z-auto: auto
+
+// ------------------------------------------------------------
+// Opacity
+// ------------------------------------------------------------
+$opacity-0:   0
+$opacity-5:   0.05
+$opacity-10:  0.1
+$opacity-20:  0.2
+$opacity-25:  0.25
+$opacity-30:  0.3
+$opacity-40:  0.4
+$opacity-50:  0.5
+$opacity-60:  0.6
+$opacity-70:  0.7
+$opacity-75:  0.75
+$opacity-80:  0.8
+$opacity-90:  0.9
+$opacity-95:  0.95
+$opacity-100: 1
+
+// ------------------------------------------------------------
+// Transition
+// ------------------------------------------------------------
+$transition-timing-linear:      linear
+$transition-timing-in:          cubic-bezier(0.4, 0, 1, 1)
+$transition-timing-out:         cubic-bezier(0, 0, 0.2, 1)
+$transition-timing-in-out:      cubic-bezier(0.4, 0, 0.2, 1)
+
+$duration-75:   75ms
+$duration-100:  100ms
+$duration-150:  150ms
+$duration-200:  200ms
+$duration-300:  300ms
+$duration-500:  500ms
+$duration-700:  700ms
+$duration-1000: 1000ms

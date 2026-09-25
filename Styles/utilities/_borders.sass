@@ -1,0 +1,437 @@
+// ============================================================
+// TAILWIND-SASS: Border, Shadow & Ring Utilities
+// ============================================================
+@use '../base/variables' as *
+
+// ------------------------------------------------------------
+// Border Width
+// ------------------------------------------------------------
+.border-0
+  border-width: 0
+
+.border
+  border-width: 1px
+
+.border-2
+  border-width: 2px
+
+.border-4
+  border-width: 4px
+
+.border-8
+  border-width: 8px
+
+.border-x-0
+  border-left-width: 0
+  border-right-width: 0
+
+.border-x
+  border-left-width: 1px
+  border-right-width: 1px
+
+.border-x-2
+  border-left-width: 2px
+  border-right-width: 2px
+
+.border-x-4
+  border-left-width: 4px
+  border-right-width: 4px
+
+.border-y-0
+  border-top-width: 0
+  border-bottom-width: 0
+
+.border-y
+  border-top-width: 1px
+  border-bottom-width: 1px
+
+.border-y-2
+  border-top-width: 2px
+  border-bottom-width: 2px
+
+.border-y-4
+  border-top-width: 4px
+  border-bottom-width: 4px
+
+.border-t-0
+  border-top-width: 0
+
+.border-t
+  border-top-width: 1px
+
+.border-t-2
+  border-top-width: 2px
+
+.border-t-4
+  border-top-width: 4px
+
+.border-r-0
+  border-right-width: 0
+
+.border-r
+  border-right-width: 1px
+
+.border-r-2
+  border-right-width: 2px
+
+.border-r-4
+  border-right-width: 4px
+
+.border-b-0
+  border-bottom-width: 0
+
+.border-b
+  border-bottom-width: 1px
+
+.border-b-2
+  border-bottom-width: 2px
+
+.border-b-4
+  border-bottom-width: 4px
+
+.border-l-0
+  border-left-width: 0
+
+.border-l
+  border-left-width: 1px
+
+.border-l-2
+  border-left-width: 2px
+
+.border-l-4
+  border-left-width: 4px
+
+// ------------------------------------------------------------
+// Border Style
+// ------------------------------------------------------------
+.border-solid
+  border-style: solid
+
+.border-dashed
+  border-style: dashed
+
+.border-dotted
+  border-style: dotted
+
+.border-double
+  border-style: double
+
+.border-hidden
+  border-style: hidden
+
+.border-none
+  border-style: none
+
+// ------------------------------------------------------------
+// Border Radius
+// ------------------------------------------------------------
+.rounded-none
+  border-radius: $rounded-none
+
+.rounded-sm
+  border-radius: $rounded-sm
+
+.rounded
+  border-radius: $rounded
+
+.rounded-md
+  border-radius: $rounded-md
+
+.rounded-lg
+  border-radius: $rounded-lg
+
+.rounded-xl
+  border-radius: $rounded-xl
+
+.rounded-2xl
+  border-radius: $rounded-2xl
+
+.rounded-3xl
+  border-radius: $rounded-3xl
+
+.rounded-full
+  border-radius: $rounded-full
+
+// Rounded per side
+.rounded-t-none
+  border-top-left-radius: $rounded-none
+  border-top-right-radius: $rounded-none
+
+.rounded-t
+  border-top-left-radius: $rounded
+  border-top-right-radius: $rounded
+
+.rounded-t-md
+  border-top-left-radius: $rounded-md
+  border-top-right-radius: $rounded-md
+
+.rounded-t-lg
+  border-top-left-radius: $rounded-lg
+  border-top-right-radius: $rounded-lg
+
+.rounded-t-full
+  border-top-left-radius: $rounded-full
+  border-top-right-radius: $rounded-full
+
+.rounded-r-none
+  border-top-right-radius: $rounded-none
+  border-bottom-right-radius: $rounded-none
+
+.rounded-r
+  border-top-right-radius: $rounded
+  border-bottom-right-radius: $rounded
+
+.rounded-r-md
+  border-top-right-radius: $rounded-md
+  border-bottom-right-radius: $rounded-md
+
+.rounded-r-lg
+  border-top-right-radius: $rounded-lg
+  border-bottom-right-radius: $rounded-lg
+
+.rounded-r-full
+  border-top-right-radius: $rounded-full
+  border-bottom-right-radius: $rounded-full
+
+.rounded-b-none
+  border-bottom-left-radius: $rounded-none
+  border-bottom-right-radius: $rounded-none
+
+.rounded-b
+  border-bottom-left-radius: $rounded
+  border-bottom-right-radius: $rounded
+
+.rounded-b-md
+  border-bottom-left-radius: $rounded-md
+  border-bottom-right-radius: $rounded-md
+
+.rounded-b-lg
+  border-bottom-left-radius: $rounded-lg
+  border-bottom-right-radius: $rounded-lg
+
+.rounded-b-full
+  border-bottom-left-radius: $rounded-full
+  border-bottom-right-radius: $rounded-full
+
+.rounded-l-none
+  border-top-left-radius: $rounded-none
+  border-bottom-left-radius: $rounded-none
+
+.rounded-l
+  border-top-left-radius: $rounded
+  border-bottom-left-radius: $rounded
+
+.rounded-l-md
+  border-top-left-radius: $rounded-md
+  border-bottom-left-radius: $rounded-md
+
+.rounded-l-lg
+  border-top-left-radius: $rounded-lg
+  border-bottom-left-radius: $rounded-lg
+
+.rounded-l-full
+  border-top-left-radius: $rounded-full
+  border-bottom-left-radius: $rounded-full
+
+// Individual corners
+.rounded-tl-none
+  border-top-left-radius: $rounded-none
+
+.rounded-tl
+  border-top-left-radius: $rounded
+
+.rounded-tl-md
+  border-top-left-radius: $rounded-md
+
+.rounded-tl-lg
+  border-top-left-radius: $rounded-lg
+
+.rounded-tl-full
+  border-top-left-radius: $rounded-full
+
+.rounded-tr-none
+  border-top-right-radius: $rounded-none
+
+.rounded-tr
+  border-top-right-radius: $rounded
+
+.rounded-tr-md
+  border-top-right-radius: $rounded-md
+
+.rounded-tr-lg
+  border-top-right-radius: $rounded-lg
+
+.rounded-tr-full
+  border-top-right-radius: $rounded-full
+
+.rounded-br-none
+  border-bottom-right-radius: $rounded-none
+
+.rounded-br
+  border-bottom-right-radius: $rounded
+
+.rounded-br-md
+  border-bottom-right-radius: $rounded-md
+
+.rounded-br-lg
+  border-bottom-right-radius: $rounded-lg
+
+.rounded-br-full
+  border-bottom-right-radius: $rounded-full
+
+.rounded-bl-none
+  border-bottom-left-radius: $rounded-none
+
+.rounded-bl
+  border-bottom-left-radius: $rounded
+
+.rounded-bl-md
+  border-bottom-left-radius: $rounded-md
+
+.rounded-bl-lg
+  border-bottom-left-radius: $rounded-lg
+
+.rounded-bl-full
+  border-bottom-left-radius: $rounded-full
+
+// ------------------------------------------------------------
+// Divide (borders between children)
+// ------------------------------------------------------------
+.divide-x > * + *
+  border-left-width: 1px
+
+.divide-x-2 > * + *
+  border-left-width: 2px
+
+.divide-y > * + *
+  border-top-width: 1px
+
+.divide-y-2 > * + *
+  border-top-width: 2px
+
+.divide-y-0 > * + *
+  border-top-width: 0
+
+.divide-x-0 > * + *
+  border-left-width: 0
+
+.divide-solid > * + *
+  border-style: solid
+
+.divide-dashed > * + *
+  border-style: dashed
+
+.divide-dotted > * + *
+  border-style: dotted
+
+// ------------------------------------------------------------
+// Box Shadow
+// ------------------------------------------------------------
+.shadow-sm
+  box-shadow: $shadow-sm
+
+.shadow
+  box-shadow: $shadow
+
+.shadow-md
+  box-shadow: $shadow-md
+
+.shadow-lg
+  box-shadow: $shadow-lg
+
+.shadow-xl
+  box-shadow: $shadow-xl
+
+.shadow-2xl
+  box-shadow: $shadow-2xl
+
+.shadow-inner
+  box-shadow: $shadow-inner
+
+.shadow-none
+  box-shadow: $shadow-none
+
+// ------------------------------------------------------------
+// Outline
+// ------------------------------------------------------------
+.outline-none
+  outline: 2px solid transparent
+  outline-offset: 2px
+
+.outline
+  outline-style: solid
+
+.outline-dashed
+  outline-style: dashed
+
+.outline-dotted
+  outline-style: dotted
+
+.outline-double
+  outline-style: double
+
+.outline-0
+  outline-width: 0
+
+.outline-1
+  outline-width: 1px
+
+.outline-2
+  outline-width: 2px
+
+.outline-4
+  outline-width: 4px
+
+.outline-8
+  outline-width: 8px
+
+.outline-offset-0
+  outline-offset: 0
+
+.outline-offset-1
+  outline-offset: 1px
+
+.outline-offset-2
+  outline-offset: 2px
+
+.outline-offset-4
+  outline-offset: 4px
+
+.outline-offset-8
+  outline-offset: 8px
+
+// ------------------------------------------------------------
+// Ring (focus-visible rings via box-shadow)
+// ------------------------------------------------------------
+.ring-0
+  box-shadow: 0 0 0 0 var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring-1
+  box-shadow: 0 0 0 1px var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring-2
+  box-shadow: 0 0 0 2px var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring
+  box-shadow: 0 0 0 3px var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring-4
+  box-shadow: 0 0 0 4px var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring-8
+  box-shadow: 0 0 0 8px var(--ring-color, rgb(59 130 246 / 0.5))
+
+.ring-inset
+  --ring-inset: inset
+
+.ring-offset-0
+  box-shadow: 0 0 0 0 var(--ring-offset-color, white), var(--ring-shadow, 0 0 0 0 transparent)
+
+.ring-offset-1
+  box-shadow: 0 0 0 1px var(--ring-offset-color, white), var(--ring-shadow, 0 0 0 0 transparent)
+
+.ring-offset-2
+  box-shadow: 0 0 0 2px var(--ring-offset-color, white), var(--ring-shadow, 0 0 0 0 transparent)
+
+.ring-offset-4
+  box-shadow: 0 0 0 4px var(--ring-offset-color, white), var(--ring-shadow, 0 0 0 0 transparent)

@@ -1,7 +1,18 @@
 @use 'boot'
-@use 'variables'  
-@use 'base'
-@use 'typography'
-@use 'layout'
-@use 'components'
 
+// Base
+@use 'base/variables' as *
+@use 'base/functions' as *
+@use 'base/mixins' as *
+@use 'base/reset'
+
+// Utilities
+@use 'utilities/spacing'
+@use 'utilities/typography'
+@use 'utilities/layout'
+@use 'utilities/colors'
+@use 'utilities/borders'
+@use 'utilities/effects'
+
+// Components
+@use 'components/components'

@@ -1,0 +1,111 @@
+// ============================================================
+// TAILWIND-SASS: Functions
+// ============================================================
+@use 'variables' as *
+@use 'sass:map'
+@use 'sass:math'
+@use 'sass:color'
+
+// ------------------------------------------------------------
+// Spacing Lookup
+// Usage: spacing(4) => 1rem
+// ------------------------------------------------------------
+@function spacing($key)
+  $value: map.get($spacing, "#{$key}")
+  @if $value == null
+    @warn "No spacing value found for key: #{$key}"
+    @return null
+  @return $value
+
+// ------------------------------------------------------------
+// Color Lookup
+// Usage: color("blue", 500) => #3b82f6
+// ------------------------------------------------------------
+@function color($name, $shade: 500)
+  $palette: map.get($colors, "#{$name}")
+  @if $palette == null
+    @warn "No color palette found for: #{$name}"
+    @return null
+  $value: map.get($palette, "#{$shade}")
+  @if $value == null
+    @warn "No shade #{$shade} found for color: #{$name}"
+    @return null
+  @return $value
+
+// ------------------------------------------------------------
+// Alpha / RGBA helper
+// Usage: alpha(#3b82f6, 0.5)
+// ------------------------------------------------------------
+@function alpha($color, $opacity)
+  @return rgba($color, $opacity)
+
+// ------------------------------------------------------------
+// Rem converter
+// Usage: rem(16) => 1rem
+// ------------------------------------------------------------
+@function rem($px, $base: 16)
+  @return math.div($px, $base) * 1rem
+
+// ------------------------------------------------------------
+// Em converter
+// Usage: em(16, 16) => 1em
+// ------------------------------------------------------------
+@function em($px, $base: 16)
+  @return math.div($px, $base) * 1em
+
+// ------------------------------------------------------------
+// Clamp helper
+// Usage: fluid(16px, 24px) — auto fluid between sm and xl
+// ------------------------------------------------------------
+@function fluid($min, $max, $min-vw: 640px, $max-vw: 1280px)
+  $slope: math.div($max - $min, $max-vw - $min-vw)
+  $intercept: $min - ($slope * $min-vw)
+  @return clamp(#{$min}, #{$intercept} + #{$slope * 100}vw, #{$max})
+
+// ------------------------------------------------------------
+// Shade lightening/darkening helpers
+// ------------------------------------------------------------
+@function lighten-color($color, $amount: 10%)
+  @return color.adjust($color, $lightness: $amount)
+
+@function darken-color($color, $amount: 10%)
+  @return color.adjust($color, $lightness: -$amount)
+
+@function tint($color, $weight: 50%)
+  @return color.mix(white, $color, $weight)
+
+@function shade($color, $weight: 50%)
+  @return color.mix(black, $color, $weight)
+
+// ------------------------------------------------------------
+// Map deep get
+// Usage: deep-get($map, "key1", "key2")
+// ------------------------------------------------------------
+@function deep-get($map, $keys...)
+  $result: $map
+  @each $key in $keys
+    $result: map.get($result, $key)
+    @if $result == null
+      @return null
+  @return $result
+
+// ------------------------------------------------------------
+// Z-index lookup
+// ------------------------------------------------------------
+$z-layers: ("base": 0, "dropdown": 1000, "sticky": 1020, "fixed": 1030, "modal-backdrop": 1040, "modal": 1050, "popover": 1060, "tooltip": 1070)
+
+@function z($layer)
+  $value: map.get($z-layers, "#{$layer}")
+  @if $value == null
+    @warn "No z-index found for layer: #{$layer}"
+    @return 0
+  @return $value
+
+// ------------------------------------------------------------
+// String helpers
+// ------------------------------------------------------------
+@function str-replace($string, $search, $replace: "")
+  $index: str-index($string, $search)
+  @if $index
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace)
+  @return $string

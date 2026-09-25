@@ -1,0 +1,733 @@
+// ============================================================
+// TAILWIND-SASS: Components
+// Ready-to-use component classes built with the mixin system
+// ============================================================
+@use '../base/variables' as *
+@use '../base/mixins' as *
+@use '../base/functions' as *
+@use '../base/reset'
+@use '../utilities/spacing'
+@use '../utilities/typography'
+@use '../utilities/layout'
+@use '../utilities/colors'
+@use '../utilities/borders'
+@use '../utilities/effects'
+
+// ------------------------------------------------------------
+// Buttons
+// ------------------------------------------------------------
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: $spacing-2
+  padding: $spacing-2 $spacing-4
+  border-radius: $rounded-md
+  font-size: $font-size-sm
+  font-weight: $font-weight-medium
+  line-height: $line-height-normal
+  border: 1px solid transparent
+  cursor: pointer
+  +transition
+
+  &:focus-visible
+    outline: 2px solid $blue-500
+    outline-offset: 2px
+
+  &:disabled
+    opacity: 0.5
+    cursor: not-allowed
+
+.btn-sm
+  padding: $spacing-1 $spacing-3
+  font-size: $font-size-xs
+
+.btn-lg
+  padding: $spacing-3 $spacing-6
+  font-size: $font-size-base
+
+.btn-primary
+  background-color: $blue-600
+  color: $white
+
+  &:hover:not(:disabled)
+    background-color: $blue-700
+
+  &:active:not(:disabled)
+    background-color: $blue-800
+
+.btn-secondary
+  background-color: $gray-100
+  color: $gray-900
+  border-color: $gray-200
+
+  &:hover:not(:disabled)
+    background-color: $gray-200
+
+.btn-danger
+  background-color: $red-600
+  color: $white
+
+  &:hover:not(:disabled)
+    background-color: $red-700
+
+.btn-ghost
+  background-color: transparent
+  color: $gray-700
+
+  &:hover:not(:disabled)
+    background-color: $gray-100
+
+.btn-outline
+  background-color: transparent
+  color: $blue-600
+  border-color: $blue-600
+
+  &:hover:not(:disabled)
+    background-color: $blue-50
+
+.btn-success
+  background-color: $green-600
+  color: $white
+
+  &:hover:not(:disabled)
+    background-color: $green-700
+
+.btn-icon
+  padding: $spacing-2
+  border-radius: $rounded-md
+
+// ------------------------------------------------------------
+// Badges
+// ------------------------------------------------------------
+.badge
+  display: inline-flex
+  align-items: center
+  gap: $spacing-1
+  padding: $spacing-0_5 $spacing-2
+  border-radius: $rounded-full
+  font-size: $font-size-xs
+  font-weight: $font-weight-medium
+  line-height: $line-height-normal
+
+.badge-blue
+  background-color: $blue-100
+  color: $blue-700
+
+.badge-green
+  background-color: $green-100
+  color: $green-700
+
+.badge-red
+  background-color: $red-100
+  color: $red-700
+
+.badge-yellow
+  background-color: $yellow-100
+  color: $yellow-700
+
+.badge-gray
+  background-color: $gray-100
+  color: $gray-700
+
+.badge-purple
+  background-color: $violet-100
+  color: $violet-700
+
+// ------------------------------------------------------------
+// Section Title 
+// ------------------------------------------------------------
+.section-title
+  display: flex
+  align-items: center
+  gap: $spacing-4
+
+  h2
+    white-space: nowrap
+
+  .divider
+    flex: 1
+    height: 1px
+    background-color: currentColor
+    opacity: 0.2
+
+// ------------------------------------------------------------
+// Card
+// ------------------------------------------------------------
+.card
+  background-color: $white
+  border-radius: $rounded-xl
+  border: 1px solid $gray-200
+  box-shadow: $shadow-sm
+  overflow: hidden
+
+.card-body
+  padding: $spacing-6
+
+.card-header
+  padding: $spacing-4 $spacing-6
+  border-bottom: 1px solid $gray-100
+  font-weight: $font-weight-semibold
+
+.card-footer
+  padding: $spacing-4 $spacing-6
+  border-top: 1px solid $gray-100
+  background-color: $gray-50
+
+// Card variants
+.card-elevated
+  box-shadow: $shadow-md
+  border: none
+
+.card-flat
+  box-shadow: none
+
+// ------------------------------------------------------------
+// Form Elements
+// ------------------------------------------------------------
+.input
+  display: block
+  width: 100%
+  padding: $spacing-2 $spacing-3
+  border: 1px solid $gray-300
+  border-radius: $rounded-md
+  background-color: $white
+  font-size: $font-size-sm
+  line-height: $line-height-normal
+  color: $gray-900
+  +transition(border-color box-shadow)
+
+  &::placeholder
+    color: $gray-400
+
+  &:hover:not(:disabled)
+    border-color: $gray-400
+
+  &:focus
+    outline: none
+    border-color: $blue-500
+    box-shadow: 0 0 0 3px rgba($blue-500, 0.15)
+
+  &:disabled
+    background-color: $gray-50
+    color: $gray-400
+    cursor: not-allowed
+
+  &.input-error
+    border-color: $red-500
+
+    &:focus
+      box-shadow: 0 0 0 3px rgba($red-500, 0.15)
+
+.input-sm
+  padding: $spacing-1 $spacing-2
+  font-size: $font-size-xs
+
+.input-lg
+  padding: $spacing-3 $spacing-4
+  font-size: $font-size-base
+
+.label
+  display: block
+  font-size: $font-size-sm
+  font-weight: $font-weight-medium
+  color: $gray-700
+  margin-bottom: $spacing-1
+
+.helper-text
+  font-size: $font-size-xs
+  color: $gray-500
+  margin-top: $spacing-1
+
+.error-text
+  font-size: $font-size-xs
+  color: $red-600
+  margin-top: $spacing-1
+
+// Checkbox & Radio
+.checkbox,
+.radio
+  width: 1rem
+  height: 1rem
+  border: 1px solid $gray-300
+  border-radius: $rounded-sm
+  background-color: $white
+  cursor: pointer
+  accent-color: $blue-600
+
+.radio
+  border-radius: $rounded-full
+
+// Select
+.select
+  @extend .input
+  appearance: none
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")
+  background-position: right 0.5rem center
+  background-repeat: no-repeat
+  background-size: 1.5em 1.5em
+  padding-right: 2.5rem
+
+// Textarea
+.textarea
+  @extend .input
+  resize: vertical
+  min-height: 6rem
+
+// Form group
+.form-group
+  display: flex
+  flex-direction: column
+  gap: $spacing-1
+
+// ------------------------------------------------------------
+// Alert
+// ------------------------------------------------------------
+.alert
+  display: flex
+  gap: $spacing-3
+  padding: $spacing-4
+  border-radius: $rounded-lg
+  font-size: $font-size-sm
+  border: 1px solid transparent
+
+.alert-info
+  background-color: $blue-50
+  color: $blue-800
+  border-color: $blue-200
+
+.alert-success
+  background-color: $green-50
+  color: $green-800
+  border-color: $green-200
+
+.alert-warning
+  background-color: $amber-50
+  color: $amber-800
+  border-color: $amber-200
+
+.alert-error
+  background-color: $red-50
+  color: $red-800
+  border-color: $red-200
+
+// ------------------------------------------------------------
+// Avatar
+// ------------------------------------------------------------
+.avatar
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  border-radius: $rounded-full
+  overflow: hidden
+  background-color: $gray-200
+  color: $gray-600
+  font-weight: $font-weight-medium
+  flex-shrink: 0
+
+.avatar-xs
+  width: 1.5rem
+  height: 1.5rem
+  font-size: $font-size-xs
+
+.avatar-sm
+  width: 2rem
+  height: 2rem
+  font-size: $font-size-xs
+
+.avatar-md
+  width: 2.5rem
+  height: 2.5rem
+  font-size: $font-size-sm
+
+.avatar-lg
+  width: 3rem
+  height: 3rem
+  font-size: $font-size-base
+
+.avatar-xl
+  width: 4rem
+  height: 4rem
+  font-size: $font-size-xl
+
+// Avatar group
+.avatar-group
+  display: flex
+
+  .avatar
+    border: 2px solid $white
+    margin-left: -0.5rem
+
+    &:first-child
+      margin-left: 0
+
+// ------------------------------------------------------------
+// Divider
+// ------------------------------------------------------------
+.divider
+  height: 1px
+  background-color: $gray-200
+  border: none
+  margin: $spacing-4 0
+
+.divider-vertical
+  width: 1px
+  height: 100%
+  background-color: $gray-200
+  display: inline-block
+  margin: 0 $spacing-4
+
+// Divider with label
+.divider-label
+  display: flex
+  align-items: center
+  gap: $spacing-4
+  color: $gray-500
+  font-size: $font-size-sm
+
+  &::before,
+  &::after
+    content: ""
+    flex: 1
+    height: 1px
+    background-color: $gray-200
+
+// ------------------------------------------------------------
+// Skeleton / Loading placeholder
+// ------------------------------------------------------------
+.skeleton
+  background: linear-gradient(90deg, $gray-100 25%, $gray-200 50%, $gray-100 75%)
+  background-size: 200% 100%
+  animation: skeleton-loading 1.5s infinite
+  border-radius: $rounded-md
+
+.skeleton-text
+  @extend .skeleton
+  height: 1em
+  border-radius: $rounded-full
+
+.skeleton-circle
+  @extend .skeleton
+  border-radius: $rounded-full
+
+@keyframes skeleton-loading
+  0%
+    background-position: 200% 0
+  100%
+    background-position: -200% 0
+
+// ------------------------------------------------------------
+// Tooltip (CSS-only)
+// ------------------------------------------------------------
+.tooltip
+  position: relative
+
+  &[data-tooltip]::after
+    content: attr(data-tooltip)
+    position: absolute
+    bottom: calc(100% + 6px)
+    left: 50%
+    transform: translateX(-50%)
+    background-color: $gray-900
+    color: $white
+    font-size: $font-size-xs
+    padding: $spacing-1 $spacing-2
+    border-radius: $rounded
+    white-space: nowrap
+    pointer-events: none
+    opacity: 0
+    +transition(opacity)
+
+  &[data-tooltip]:hover::after
+    opacity: 1
+
+// ------------------------------------------------------------
+// Prose (Typography component)
+// ------------------------------------------------------------
+.prose
+  max-width: 65ch
+  color: $gray-700
+  line-height: $line-height-relaxed
+
+  h1, h2, h3, h4, h5, h6
+    color: $gray-900
+    font-weight: $font-weight-bold
+    line-height: $line-height-tight
+
+  h1
+    font-size: $font-size-4xl
+    margin-bottom: $spacing-8
+
+  h2
+    font-size: $font-size-3xl
+    margin-top: $spacing-12
+    margin-bottom: $spacing-4
+
+  h3
+    font-size: $font-size-2xl
+    margin-top: $spacing-8
+    margin-bottom: $spacing-4
+
+  h4
+    font-size: $font-size-xl
+    margin-top: $spacing-6
+    margin-bottom: $spacing-2
+
+  p
+    margin-bottom: $spacing-5
+
+  a
+    color: $blue-600
+    text-decoration: underline
+
+    &:hover
+      color: $blue-700
+
+  code
+    font-size: 0.875em
+    background-color: $gray-100
+    padding: $spacing-0_5 $spacing-1
+    border-radius: $rounded-sm
+    font-family: $font-mono
+
+  pre
+    background-color: $gray-900
+    color: $gray-100
+    padding: $spacing-4
+    border-radius: $rounded-lg
+    overflow-x: auto
+    font-family: $font-mono
+    font-size: $font-size-sm
+    margin: $spacing-6 0
+
+    code
+      background: none
+      padding: 0
+      color: inherit
+
+  blockquote
+    border-left: 4px solid $gray-300
+    padding-left: $spacing-4
+    color: $gray-500
+    font-style: italic
+    margin: $spacing-6 0
+
+  ul
+    list-style-type: disc
+    padding-left: $spacing-6
+    margin: $spacing-5 0
+
+  ol
+    list-style-type: decimal
+    padding-left: $spacing-6
+    margin: $spacing-5 0
+
+  li
+    margin: $spacing-2 0
+
+  strong
+    font-weight: $font-weight-semibold
+    color: $gray-900
+
+  em
+    font-style: italic
+
+  hr
+    border: none
+    border-top: 1px solid $gray-200
+    margin: $spacing-8 0
+
+  table
+    width: 100%
+    border-collapse: collapse
+    font-size: $font-size-sm
+    margin: $spacing-6 0
+
+  th
+    text-align: left
+    padding: $spacing-3 $spacing-4
+    font-weight: $font-weight-semibold
+    border-bottom: 2px solid $gray-200
+
+  td
+    padding: $spacing-3 $spacing-4
+    border-bottom: 1px solid $gray-100
+
+  img
+    border-radius: $rounded-lg
+    margin: $spacing-6 0
+
+
+
+// ── Brand tokens ─────────────────────────────────────────────
+$color-accent: #ad8d
+$color-accent-bg: rgb(2, 37, 31)
+
+// ── Global ───────────────────────────────────────────────────
+body
+  background: $color-primary !important
+
+a
+  font-size: 2rem
+
+a:link, a:visited
+  text-decoration: none
+  color: inherit
+
+// ── Layout ───────────────────────────────────────────────────
+.wrapper
+  display: flex
+  justify-content: center
+
+.main-layout
+  display: flex
+  gap: 1rem
+  padding: 5rem
+  max-width: 1400px
+  @media (max-width: $breakpoint)
+    font-size: 2rem
+    flex-wrap: wrap
+    justify-content: center
+
+.main-content
+  width: 55%
+  @media (max-width: $breakpoint)
+    width: 100%
+
+// ── Header ───────────────────────────────────────────────────
+.header-container
+  position: relative
+  width: 45%
+  @media (max-width: $breakpoint)
+    width: 100%
+
+  .header
+    transform: translateY(12.5rem)
+    position: fixed
+    @media (max-width: $breakpoint)
+      display: block
+      position: unset
+      transform: unset
+
+  .flex
+    gap: 2rem
+    display: flex
+    flex-direction: column
+
+  h1
+    font-size: 4rem
+    line-height: 1
+    margin-right: 10rem
+    transform: translate(-5px, 0)
+    @media (max-width: $breakpoint)
+      font-size: 3rem
+      max-width: 100%
+      margin: unset
+
+  h2
+    padding: 0
+    font-size: 3rem
+    @media (max-width: $breakpoint)
+      max-width: 100%
+      font-size: 3rem
+
+  p
+    max-width: 70%
+    font-size: 1.9rem
+
+  .menu ul
+    margin-top: 1rem
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+
+    li
+      margin: 0 -1rem
+
+      a
+        padding: 1rem
+        inset: -1rem -2rem
+        border-radius: .5rem
+        transition: margin .2s ease-in-out
+        &:active
+          margin: 0 1.5rem
+        &:hover
+          margin: .5rem
+
+// ── Intro ────────────────────────────────────────────────────
+.intro
+  position: relative
+
+  p
+    font-size: 2rem
+    line-height: 3rem
+    &:not(:first-child)
+      padding-top: 3rem
+    &:first-child
+      padding-top: 12rem
+      @media (max-width: $breakpoint)
+        padding-top: 2rem
+
+.bold
+  font-weight: 700
+  font-size: 2.3rem
+
+// ── Menu ─────────────────────────────────────────────────────
+.menu
+  font-size: 6rem
+  transition: text-decoration 200ms ease-in-out
+  margin-top: 7rem
+  @media (max-width: $breakpoint)
+    display: none
+
+.active
+  background: #ad8d
+  color: black !important
+  transition: margin .2s ease-in-out
+  margin: 0 1rem
+
+// ── Shared: experience & projects ────────────────────────────
+.experience,
+.projects
+
+  // Hover reveal — sibling selector, can't be a utility
+  .exp-item-wrapper:hover .expand
+    opacity: 0.1
+
+  // Custom inset value not in spacing scale
+  .link
+    position: absolute
+    inset: -1rem -2rem
+    z-index: 5
+
+  .expand
+    inset: -1rem -2rem
+
+
+// ── Projects only ────────────────────────────────────────────
+.projects
+
+  #beacon
+    min-width: 60rem
+    @media (max-width: $breakpoint)
+      min-width: unset
+
+// ── Tech icon ────────────────────────────────────────────────
+.tech-icon
+  color: $color-accent
+  background: $color-accent-bg
+
+// ── Resume link ──────────────────────────────────────────────
+.resume-link
+  font-family: monospace
+
+  a
+    font-family: monospace
+
+// ── Misc ─────────────────────────────────────────────────────
+.built-with
+  display: flex
+  place-items: center
+  padding-top: 3rem
+  font-size: 1.5rem
+  font-family: monospace
