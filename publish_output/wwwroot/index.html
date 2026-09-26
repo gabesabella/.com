@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2027_Portfolio</title>
+    <base href="/" />
+    <link href="_framework/dotnet.fhed7y88rs.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-bcaDAlSkEKXFS8sXAnOc+KYJ+GdrhRbt52RRyBJzH9o=" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="importmap">{
+  "imports": {
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.fhed7y88rs.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.b6l13xorvf.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/dotnet.fhed7y88rs.js": "sha256-bcaDAlSkEKXFS8sXAnOc+KYJ+GdrhRbt52RRyBJzH9o=",
+    "./_framework/dotnet.js": "sha256-bcaDAlSkEKXFS8sXAnOc+KYJ+GdrhRbt52RRyBJzH9o=",
+    "./_framework/dotnet.native.b6l13xorvf.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.native.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds="
+  }
+}</script>
+  </head>
+  <body>
+    <div id="boot-screen">
+      <pre id="boot-log"></pre>
+      <span class="boot-cursor">_</span>
+    </div>
+    <div id="app"></div>
+    <script>
+      function observeElementById(sectionId, navId) {
+        const sectionElement = document.getElementById(sectionId);
+        const navElement = document.getElementById(navId);
+
+        const options = {
+          root: null, // defaults to the viewport
+          rootMargin: '-200px 0px -800px 0px', // shrinks the bottom boundary by 100px
+          threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navElement.classList.add('active');
+            } else {
+              navElement.classList.remove('active');
+            }
+          });
+        }, options);
+
+        observer.observe(sectionElement);
+      }
+    </script>
+    <script src="js/boot.js"></script>
+    <script
+      src="_framework/blazor.webassembly.66stpp682q.js"
+      autostart="false"
+    ></script>
+    <script>
+      Blazor.start().then(() => {
+        if (window.__bootReveal) window.__bootReveal();
+      });
+    </script>
+  </body>
+</html>

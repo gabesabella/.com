@@ -1,0 +1,27 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/_framework/(.*)",
+      "destination": "/_framework/$1"
+    },
+    {
+      "source": "/((?!_framework|css|images).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/_framework/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-transform, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/_framework/blazor.boot.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
+      ]
+    }
+  ]
+}
