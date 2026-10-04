@@ -689,8 +689,10 @@ a:link, a:visited
 // ── Shared: experience & projects ────────────────────────────
 .experience,
 .projects
-
+    
   .exp-item
+    @media (max-width: $breakpoint)
+      flex-wrap: wrap
     +md
       flex-direction: row
 
@@ -717,10 +719,7 @@ a:link, a:visited
 // ── Projects only ────────────────────────────────────────────
 .projects
   #beacon
-    min-width: 60rem
-    @media (max-width: $breakpoint)
-      min-width: unset
-
+    width: 100%
   .exp-item:has(#beacon)
     +md
       flex-direction: column
@@ -730,7 +729,6 @@ a:link, a:visited
 
       img
         width: 100%
-        max-width: unset
 
       .exp-info
         padding-left: 0
@@ -755,6 +753,6 @@ a:link, a:visited
 .built-with
   display: flex
   place-items: center
-  padding-top: 3rem
-  font-size: 1.5rem
+  margin-top: 5rem
+  font-size: 1.2rem
   font-family: monospace

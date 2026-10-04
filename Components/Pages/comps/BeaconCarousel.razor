@@ -1,0 +1,37 @@
+<div class="exp-item-wrapper relative mt-16">
+    <div class="expand absolute rounded-2xl opacity-0 transition-opacity duration-200" style="inset: -1rem -2rem; background: #8d8d; z-index: 0;"></div>
+
+    <div class="exp-item flex py-4 z-10">
+        <div class="image w-full" id="beacon">
+            <BeaconCarousel />
+        </div>
+        <a href="#" class="link"></a>
+        <div class="exp-info pt-8">
+            <div class="title text-2xl font-bold text-left pb-4">Latest Project: Beacon</div>
+            <div class="desc text-lg leading-8 pt-4">
+                Well-architected modular systems monitoring dashboard. I poured my heart and soul into it. It tracks failures that would go un-noticed, giving the company real-time, accurate status instead of hand-updated tickets — with alerts anyone can subscribe to. Built out a full admin backend so authorized users can configure additional processes.
+            </div>
+            <div class="exp-tech flex flex-wrap gap-2 pt-8">
+                <span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl">Blazor Server</span>
+                <span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl">SQLite</span>
+                <span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl">Azure Service Bus</span>
+                <span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl">Active Directory</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+private int currentIndex = 0;
+
+private readonly string[] Images = new[]
+{
+"/img/dashboard.png",
+"/img/admin%20ab%20view.png",
+"/img/email.png"
+};
+
+private void Next() => currentIndex = (currentIndex + 1) % Images.Length;
+private void Previous() => currentIndex = (currentIndex - 1 + Images.Length) % Images.Length;
+private void GoTo(int index) => currentIndex = index;
+}
