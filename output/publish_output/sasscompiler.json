@@ -1,8 +1,0 @@
-{
-  "Configurations": [
-    {
-      "SourceFolder": "Styles",
-      "TargetFolder": "wwwroot/css"
-    }
-  ]
-}
