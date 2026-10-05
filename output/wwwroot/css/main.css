@@ -14585,7 +14585,7 @@ a:where(:link, :visited) {
 .header-container .flex {
   gap: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .header-container h1 {
   font-size: 3rem;
