@@ -14,6 +14,9 @@
 
   .header
     padding-top: 7.5rem
+    display: flex
+    flex-direction: column
+    
     position: fixed
     @media (max-width: $breakpoint)
       display: block
@@ -95,8 +98,12 @@
   gap: .5rem
 
 .avatar-photo
-  width: 6rem
-  height: 6rem
+  width: 9rem
+  height: 12rem
   flex-shrink: 0
-  border-radius: $rounded-full
   object-fit: cover
+  border-radius: 5rem
+
+  @media (max-width: $breakpoint)
+    width: 6rem
+    height: 8rem

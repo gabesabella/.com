@@ -14573,6 +14573,8 @@ a:where(:link, :visited) {
 }
 .header-container .header {
   padding-top: 7.5rem;
+  display: flex;
+  flex-direction: column;
   position: fixed;
 }
 @media (max-width: 1000px) {
@@ -14672,11 +14674,17 @@ a:where(:link, :visited) {
 }
 
 .avatar-photo {
-  width: 6rem;
-  height: 6rem;
+  width: 9rem;
+  height: 12rem;
   flex-shrink: 0;
-  border-radius: 9999px;
   object-fit: cover;
+  border-radius: 5rem;
+}
+@media (max-width: 1000px) {
+  .avatar-photo {
+    width: 6rem;
+    height: 8rem;
+  }
 }
 
 .intro {
