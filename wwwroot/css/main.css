@@ -14544,12 +14544,7 @@ a:where(:link, :visited) {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 10rem;
-}
-@media (max-width: 1000px) {
-  .section-title {
-    padding-top: 2rem;
-  }
+  padding-top: 4rem;
 }
 .section-title h2 {
   white-space: nowrap;
