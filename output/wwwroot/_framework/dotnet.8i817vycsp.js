@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "2027_Portfolio",
   "applicationEnvironment": "Production",
   "resources": {
-    "hash": "sha256-FDxNA+oBfTsdpCxYG3DYKLLHcIdtW166EtZzqZor1rs=",
+    "hash": "sha256-E/DhfsMS+x5A8vHgoZ4IMm8D4pC3NGuave6CB7zhCQ0=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.b6l13xorvf.js"
@@ -60,8 +60,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
     "assembly": [
       {
         "virtualPath": "Microsoft.AspNetCore.Components.wasm",
-        "name": "Microsoft.AspNetCore.Components.4ziehzc029.wasm",
-        "hash": "sha256-kDQ9wSdZLTZEgUqkx4jXd7x5uf3mV+3AfigYR8Per4c=",
+        "name": "Microsoft.AspNetCore.Components.r9nva4oy6w.wasm",
+        "hash": "sha256-j2E1Z4TQt5g2xKG18ZqdsBVfgdC7P6eW07T23r8ae0k=",
         "cache": "force-cache"
       },
       {
@@ -276,8 +276,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "2027_Portfolio.wasm",
-        "name": "2027_Portfolio.5545ftd7dn.wasm",
-        "hash": "sha256-OTd5JLCwa0ourRBtAa2CFex39+5YV0nUFf4ggmAh+eU=",
+        "name": "2027_Portfolio.irk71atyss.wasm",
+        "hash": "sha256-3r0eek7gCF5WBEydlRZV7nfhSao13sVV59MDpDF4Peg=",
         "cache": "force-cache"
       }
     ]
