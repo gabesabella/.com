@@ -14658,7 +14658,7 @@ a:where(:link, :visited) {
 }
 
 .active {
-  background: red;
+  background: rgba(170, 221, 136, 0.8666666667);
   color: black !important;
   transition: margin 0.2s ease-in-out;
   margin: 0 1rem;

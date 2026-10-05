@@ -12,9 +12,9 @@ git push origin main
 
 
 Next things to do: 
-[] extract media queries to css class (ask claude)
-[] refactor mobile styles, esp font sizes and spacing 
-[] fix links to projects
-[] update CV and relink 
+[x] extract media queries to css class (ask claude)
+[x] refactor mobile styles, esp font sizes and spacing 
+[x] fix links to projects
+[x] update CV and relink 
 [] pick better fonts
 [] get higher res screenshots of projects
