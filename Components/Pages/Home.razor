@@ -1,41 +1,26 @@
-@page "/"
-@inject IJSRuntime JS;
+@inject IJSRuntime JS
 
-@using System.Runtime.InteropServices
-@using _2027_Portfolio.Components.Pages.comps
-
-<body>
-    <div class="wrapper">
-        <div class="main-layout">
-            <Header />
-            <div class="main-content">
-                <Intro/>
-                <SectionTitle Title="Experience" />
-
-                <Experience />
-                <SectionTitle Title="Projects" />
-
-                <Projects />
-                <BuiltWith />
-            </div>
-        </div>
+<div class="wrapper">
+    <div class="main-layout">
+        <Header />
+        <main class="main-content">
+            <Intro />
+            <SectionTitle Title="@Sections.Experience.Label" />
+            <Experience />
+            <SectionTitle Title="@Sections.Projects.Label" />
+            <Projects />
+            <BuiltWith />
+        </main>
     </div>
-</body>
-
-
-
+</div>
 
 @code {
-      protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            // Calls window.yourJsFunction("Hello World")
-            await JS.InvokeVoidAsync("observeElementById", "intro", "nav-intro");
-            await JS.InvokeVoidAsync("observeElementById", "experience", "nav-experience");
-            await JS.InvokeVoidAsync("observeElementById", "projects", "nav-projects");
-            @* await JS.InvokeVoidAsync("observeElementById", "contact", "nav-contact"); *@
+            var ids = Sections.All.Select(s => s.Id).ToArray();
+            await JS.InvokeVoidAsync("observeSections", ids);
         }
     }
 }
-

@@ -1,0 +1,19 @@
+@use '../base/variables' as *
+@use '../base/mixins' as *
+
+.intro
+  position: relative
+
+  p
+    font-size: 1.5rem
+    line-height: 3rem
+    @media (max-width: $breakpoint)
+      font-size: 1rem
+      line-height: 1.5rem
+
+    &:not(:first-child)
+      padding-top: 3rem
+    &:first-child
+      padding-top: 7.5rem
+      @media (max-width: $breakpoint)
+        padding-top: unset

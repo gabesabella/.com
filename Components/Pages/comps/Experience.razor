@@ -1,61 +1,18 @@
-<section class="experience relative" id="experience">
-	<div class="exp-item-wrapper relative mt-16">
-		<div class="expand absolute rounded-2xl opacity-0 transition-opacity duration-200" style="inset: -1rem -2rem; background: #8d8d; z-index: 0;"></div>
+<section id="@Sections.Experience.Id" class="experience">
+    @foreach (var job in PortfolioData.Jobs)
+    {
+        <HoverCard>
+            <div class="exp-item flex py-4">
+                <div class="exp-time min-w-48 text-base font-mono">@job.Period</div>
+                <div class="exp-info">
+                    <h3 class="title text-2xl font-bold text-left pb-4">@job.Title</h3>
+                    <p class="desc leading-6 pt-4">@job.Description</p>
+                    <TechTags Items="job.Tech" />
+                </div>
+            </div>
+        </HoverCard>
+    }
 
-		<div class="exp-item flex py-4 z-10">
-			<div class="exp-time min-w-48 text-base font-mono">2025—Present</div>
-			<div class="exp-info">
-				<div class="title text-2xl font-bold text-left pb-4">Full Stack Developer — NHPRI</div>
-				<p class="desc text-lg leading-8 pt-4">
-					Own two production systems, including the admin backend for company-critical ActiveBatch job scheduling. Built Beacon, a monitoring tool that replaced manual failure-email triage with automated health tracking and real-time alerts — eliminating a standing manual process for the production support team. Independently driving modernization of legacy systems and documenting the work to bring the team out of institutional silos.
-				</p>
-				<div class="exp-tech flex flex-wrap gap-2 pt-8">
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">C#</span>
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">.NET/Blazor</span>
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">DevOps</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="exp-item-wrapper relative mt-16">
-		<div class="expand absolute rounded-2xl opacity-0 transition-opacity duration-200" style="inset: -1rem -2rem; background: #8d8d; z-index: 0;"></div>
-
-		<div class="exp-item flex py-4 z-10">
-			<div class="exp-time min-w-48 text-base font-mono">2023—2025</div>
-			<div class="exp-info">
-				<div class="title text-2xl font-bold text-left pb-4">Software Engineer — Convention Data Services</div>
-				<div class="desc text-lg leading-8 pt-4">
-					Built and maintained .NET integrations for enterprise exhibitors at live events (up to 100k attendees, 110+ countries). Led incident response when a live integration failed mid-event, working directly with the exhibitor's manager through resolution.
-				</div>
-				<div class="exp-tech flex flex-wrap gap-2 pt-8">
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">.NET/C#</span>
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">SQL Server</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="exp-item-wrapper relative mt-16">
-		<div class="expand absolute rounded-2xl opacity-0 transition-opacity duration-200" style="inset: -1rem -2rem; background: #8d8d; z-index: 0;"></div>
-
-		<div class="exp-item flex py-4 z-10">
-			<div class="exp-time min-w-48 text-base font-mono">2020—2023</div>
-			<div class="exp-info">
-				<div class="title text-2xl font-bold text-left pb-4">Bachelor of Science in Computer Science — WGU</div>
-				<div class="desc text-lg leading-8 pt-4">
-					Learned theory, mathematical foundations, and technical execution of computing and software systems.
-				</div>
-				<div class="exp-tech flex flex-wrap gap-2 pt-8">
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">Discrete Math</span>
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">Data Structures / Algorithms</span>
-					<span class="tech-icon font-bold text-sm px-4 py-2 rounded-2xl" style="color: #ad8d; background: rgb(2, 37, 31);">Software Development</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<h3 class="resume-link mt-16 btn btn-secondary">
-		<a href="/Gabriel_Sabella_Resume_2026.pdf" class="font-mono text-sm">View Complete CV</a>
-	</h3>
-
+    <a href="/Gabriel_Sabella_Resume_2026.pdf" class="btn btn-accent mt-16 font-mono"
+       target="_blank" rel="noopener">View Complete CV</a>
 </section>

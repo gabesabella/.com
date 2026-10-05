@@ -1,0 +1,19 @@
+@use '../base/variables' as *
+@use '../base/mixins' as *
+
+.section-title
+  display: flex
+  align-items: center
+  gap: $spacing-4
+  padding-top: $p-lg
+  @media (max-width: $breakpoint)
+    padding-top: $p-sm
+    
+  h2
+    white-space: nowrap
+
+  .divider
+    flex: 1
+    height: 1px
+    background-color: currentColor
+    opacity: 0.2

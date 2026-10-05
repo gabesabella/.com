@@ -1,0 +1,19 @@
+<HoverCard Href="@Project.Url" Label="@Project.Title">
+    <div class="exp-item flex py-4 @(Project.Featured ? "featured" : null)">
+        @if (Project.Image is not null)
+        {
+            <div class="image">
+                <img src="@Project.Image" alt="@Project.Title screenshot" loading="lazy" />
+            </div>
+        }
+        <div class="exp-info">
+            <h3 class="title text-2xl font-bold text-left pb-4">@Project.Title</h3>
+            <p class="desc text-lg leading-8 pt-4">@Project.Description</p>
+            <TechTags Items="Project.Tech" />
+        </div>
+    </div>
+</HoverCard>
+
+@code {
+    [Parameter, EditorRequired] public Project Project { get; set; } = default!;
+}

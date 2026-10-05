@@ -1,0 +1,102 @@
+@use '../base/variables' as *
+@use '../base/mixins' as *
+.header-title
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+
+.header-container
+  position: relative
+  width: 50%
+  @media (max-width: $breakpoint)
+    width: 100%
+
+  .header
+    padding-top: 7.5rem
+    position: fixed
+    @media (max-width: $breakpoint)
+      display: block
+      position: unset
+      padding-top: 3rem
+
+  .flex
+    gap: 1rem
+    display: flex
+    flex-direction: column
+
+  h1
+    font-size: 3rem
+    line-height: 1
+    transform: translate(-5px, 0)
+    @media (max-width: $breakpoint)
+      font-size: 2rem
+      max-width: 100%
+      margin: unset
+
+  h2
+    padding: 0
+    font-size: 2rem
+    @media (max-width: $breakpoint)
+      max-width: 100%
+      font-size: 1.5rem
+
+  p
+    max-width: 70%
+
+    @media (max-width: $breakpoint)
+      max-width: 100%
+      font-size: 1.2rem
+
+    li
+      margin: 0 -1rem
+
+      a
+        inset: -1rem -2rem
+        border-radius: .5rem
+        transition: margin .2s ease-in-out
+        &:active
+          margin: 0 1.5rem
+        &:hover
+          margin: .5rem
+
+.menu li a
+  display: inline-block
+  margin-left: -1rem
+  padding: .5rem 1rem
+  border-radius: $rounded-lg
+  font-size: 1rem
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out
+
+  &:hover
+    transform: translateX(.5rem)
+
+.active
+  background: $color-accent
+  color: black !important
+  transform: translateX(.5rem)
+
+
+.active
+  background: red
+  color: black !important
+  transition: margin .2s ease-in-out
+  margin: 0 1rem
+
+.header-title
+  display: flex
+  flex-direction: row
+  align-items: center
+  gap: 1.5rem
+
+.header-name
+  display: flex
+  flex-direction: column
+  gap: .5rem
+
+.avatar-photo
+  width: 6rem
+  height: 6rem
+  flex-shrink: 0
+  border-radius: $rounded-full
+  object-fit: cover

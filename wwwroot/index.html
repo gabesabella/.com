@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <script type="importmap"></script>
   </head>
   <body>
     <div id="boot-screen">
@@ -17,30 +16,7 @@
       <span class="boot-cursor">_</span>
     </div>
     <div id="app"></div>
-    <script>
-      function observeElementById(sectionId, navId) {
-        const sectionElement = document.getElementById(sectionId);
-        const navElement = document.getElementById(navId);
-
-        const options = {
-          root: null, // defaults to the viewport
-          rootMargin: '-200px 0px -800px 0px', // shrinks the bottom boundary by 100px
-          threshold: 0,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              navElement.classList.add('active');
-            } else {
-              navElement.classList.remove('active');
-            }
-          });
-        }, options);
-
-        observer.observe(sectionElement);
-      }
-    </script>
+    <script src="./js/nav.js"></script>
     <script src="./js/boot.js"></script>
     <script
       src="_framework/blazor.webassembly#[.{fingerprint}].js"
