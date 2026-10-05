@@ -141,7 +141,10 @@
   display: flex
   align-items: center
   gap: $spacing-4
-
+  padding-top: $p-lg
+  @media (max-width: $breakpoint)
+    padding-top: $p-sm
+    
   h2
     white-space: nowrap
 
@@ -588,6 +591,7 @@ a:link, a:visited
     font-size: 2rem
     flex-wrap: wrap
     justify-content: center
+    padding: 1rem
 
 .main-content
   width: 55%
@@ -620,7 +624,7 @@ a:link, a:visited
     margin-right: 10rem
     transform: translate(-5px, 0)
     @media (max-width: $breakpoint)
-      font-size: 3rem
+      font-size: 2rem
       max-width: 100%
       margin: unset
 
@@ -629,23 +633,20 @@ a:link, a:visited
     font-size: 3rem
     @media (max-width: $breakpoint)
       max-width: 100%
-      font-size: 3rem
+      font-size: 1.5rem
 
   p
     max-width: 70%
     font-size: 1.9rem
 
-  .menu ul
-    margin-top: 1rem
-    display: flex
-    flex-direction: column
-    gap: 2.5rem
+    @media (max-width: $breakpoint)
+      max-width: 100%
+      font-size: 1.2rem
 
     li
       margin: 0 -1rem
 
       a
-        padding: 1rem
         inset: -1rem -2rem
         border-radius: .5rem
         transition: margin .2s ease-in-out
@@ -661,6 +662,10 @@ a:link, a:visited
   p
     font-size: 2rem
     line-height: 3rem
+    @media (max-width: $breakpoint)
+      font-size: 1rem
+      line-height: 2rem
+
     &:not(:first-child)
       padding-top: 3rem
     &:first-child
@@ -670,15 +675,16 @@ a:link, a:visited
 
 .bold
   font-weight: 700
-  font-size: 2.3rem
 
 // ── Menu ─────────────────────────────────────────────────────
 .menu
-  font-size: 6rem
   transition: text-decoration 200ms ease-in-out
-  margin-top: 7rem
   @media (max-width: $breakpoint)
     display: none
+
+.menu li a
+  font-size: 1rem 
+
 
 .active
   background: #ad8d
@@ -750,6 +756,9 @@ a:link, a:visited
 .exp-item-wrapper:hover .expand
   opacity: .1
 
+.exp-item-wrapper 
+  @media (max-width: $breakpoint)
+    margin: unset !important
 .built-with
   display: flex
   place-items: center

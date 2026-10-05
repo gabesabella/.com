@@ -2,9 +2,10 @@
 dotnet clean -c Release
 Remove-Item -Recurse -Force **/bin, **/obj
 
-# For Mac / Linux (Bash)
-dotnet clean -c Release
-rm -rf **/bin **/obj
 
-##
-vercel deploy publish_output/wwwroot --local-config=vercel.json --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+dotnet clean -c Release
+Remove-Item -Recurse -Force **/bin, **/obj
+dotnet publish -c Release -o output
+git add .
+git commit -m "Cleaned up bin and obj folders"
+git push origin main

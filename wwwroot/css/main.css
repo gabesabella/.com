@@ -14478,6 +14478,12 @@ img, video {
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding-top: 10rem;
+}
+@media (max-width: 1000px) {
+  .section-title {
+    padding-top: 2rem;
+  }
 }
 .section-title h2 {
   white-space: nowrap;
@@ -14927,6 +14933,7 @@ a:link, a:visited {
     font-size: 2rem;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 1rem;
   }
 }
 
@@ -14972,7 +14979,7 @@ a:link, a:visited {
 }
 @media (max-width: 1000px) {
   .header-container h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     max-width: 100%;
     margin: unset;
   }
@@ -14984,32 +14991,31 @@ a:link, a:visited {
 @media (max-width: 1000px) {
   .header-container h2 {
     max-width: 100%;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
 .header-container p {
   max-width: 70%;
   font-size: 1.9rem;
 }
-.header-container .menu ul {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+@media (max-width: 1000px) {
+  .header-container p {
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
 }
-.header-container .menu ul li {
+.header-container p li {
   margin: 0 -1rem;
 }
-.header-container .menu ul li a {
-  padding: 1rem;
+.header-container p li a {
   inset: -1rem -2rem;
   border-radius: 0.5rem;
   transition: margin 0.2s ease-in-out;
 }
-.header-container .menu ul li a:active {
+.header-container p li a:active {
   margin: 0 1.5rem;
 }
-.header-container .menu ul li a:hover {
+.header-container p li a:hover {
   margin: 0.5rem;
 }
 
@@ -15019,6 +15025,12 @@ a:link, a:visited {
 .intro p {
   font-size: 2rem;
   line-height: 3rem;
+}
+@media (max-width: 1000px) {
+  .intro p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
 }
 .intro p:not(:first-child) {
   padding-top: 3rem;
@@ -15034,18 +15046,19 @@ a:link, a:visited {
 
 .bold {
   font-weight: 700;
-  font-size: 2.3rem;
 }
 
 .menu {
-  font-size: 6rem;
   transition: text-decoration 200ms ease-in-out;
-  margin-top: 7rem;
 }
 @media (max-width: 1000px) {
   .menu {
     display: none;
   }
+}
+
+.menu li a {
+  font-size: 1rem;
 }
 
 .active {
@@ -15126,6 +15139,12 @@ a:link, a:visited {
 
 .exp-item-wrapper:hover .expand {
   opacity: 0.1;
+}
+
+@media (max-width: 1000px) {
+  .exp-item-wrapper {
+    margin: unset !important;
+  }
 }
 
 .built-with {
