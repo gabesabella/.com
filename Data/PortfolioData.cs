@@ -17,6 +17,7 @@ public static class PortfolioData
         new("2020—2023", "Bachelor of Science in Computer Science — WGU",
             "Learned theory, mathematical foundations, and technical execution of computing and software systems.",
             ["Discrete Math", "Data Structures / Algorithms", "Software Development"]),
+
     ];
 
     public static readonly Project[] Projects =
