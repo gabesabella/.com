@@ -7,7 +7,7 @@ public static class PortfolioData
     public static readonly Job[] Jobs =
     [
         new("2025—Present", "Full Stack Developer — NHPRI",
-            "Built Beacon, a monitoring tool that replaced manual failure-email triage with automated health tracking and real-time alerts — eliminating a standing manual process for the production support team. Independently driving modernization of legacy systems and documenting the work to bring the team out of institutional silos.",
+            "Independently driving modernization of legacy systems and documenting the work to bring the team out of institutional silos. Built Beacon, a monitoring tool that replaced manual failure-email triage with automated health tracking and real-time alerts — eliminating a standing manual process for the production support team.",
             ["C#", ".NET/Blazor", "DevOps"]),
 
         new("2023—2025", "Software Engineer — Convention Data Services",
@@ -15,7 +15,7 @@ public static class PortfolioData
             [".NET/C#", "SQL Server"]),
 
         new("2020—2023", "Bachelor of Science in Computer Science — WGU",
-            "Learned theory, mathematical foundations, and technical execution of computing and software systems.",
+            "Learned theory, mathematical foundations, data structures and algorithms, and technical execution of computing and software systems.",
             ["Discrete Math", "Data Structures / Algorithms", "Software Development"]),
 
     ];
@@ -26,29 +26,26 @@ public static class PortfolioData
             Description: "Modular systems monitoring dashboard that I poured my heart and soul into. It enables the team to monitor and be notified of issues that would go un-noticed, giving the company real-time, accurate status instead of hand-updated tickets — with alerts anyone can subscribe to. Built out a full admin backend so authorized users can configure additional jobs to monitor.",
             Tech: ["Blazor Server", "Azure Service Bus", "SQLite", "Azure DevOps"],
             Image: "/img/dashboard.png", Featured: true),
-
-        new(Title: "gabesabella.dev (v1)",
-            Description: "First version of this portfolio, built in React, Tailwind, and TypeScript. Designed to be a fast, responsive, and visually appealing showcase of my work.",
-            Tech: ["React", "Tailwind CSS", "TypeScript", "Email.JS"],
-            Image: "/img/portfolio-v1.png", Url: "https://gabesabella-dev.vercel.app/"),
-
         new(Title: "Showcase Website for Woodworker",
             Description: "Showcase for an independent woodworker — I took all of the photos and built it with React and SCSS.",
             Tech: ["React", "SCSS"],
             Image: "/img/gregsshop.png", Url: "https://gregsshop.vercel.app/"),
-        
         new(Title: "silvercord.org",
             Description: "Website for a massage therapist — built in React and SCSS with a calm, client-facing design suited to a wellness practice.",
             Tech: ["React", "SCSS", "Calendly", "Email.JS"],
             Image: "/img/silvercord.png", Url: "https://www.silvercord.org/"),
+        new(Title: "gabesabella.dev (v1)",
+            Description: "First version of this portfolio, built in React, Tailwind, and TypeScript. Designed to be a fast, responsive, and visually appealing showcase of my work.",
+            Tech: ["React", "Tailwind CSS", "TypeScript", "Email.JS"],
+            Image: "/img/portfolio-v1.png", Url: "https://gabesabella-dev.vercel.app/"),
         
         new(Title: "Obligatory TODO App",
-            Description: "The standard rite of passage — kept here deliberately, warts and all, as a baseline against the rest of the work.",
+            Description: "Easily the cleanest TODO app made in the last 20 years. You can add things, then mark them as complete. Pretty cutting edge stuff!",
             Tech: ["React", "TypeScript", "Tailwind CSS"],
             Image: "/img/todo.png", Url: "https://todo-pi-nine.vercel.app/"),
 
         new(Title: "CSS-Only Resume",
-            Description: "Early project, hand-built in raw HTML/CSS before frameworks entered the picture. Kept as-is as a marker of the starting point.",
+            Description: "Early project, back when experience sliders were everywhere. A learning exercise to understand the fundamentals of web design.",
             Tech: ["HTML", "CSS"],
             Image: "/img/oldschool.png", Url: "https://gabesresume.vercel.app/"),
 
