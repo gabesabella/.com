@@ -11,23 +11,26 @@
   width: 50%
   @media (max-width: $breakpoint)
     width: 100%
-
+    display: flex
+    justify-content: center
   .header
     padding-top: 7.5rem
     display: flex
     flex-direction: column
-    
     position: fixed
     @media (max-width: $breakpoint)
       display: block
       position: unset
-      padding-top: 3rem
-
+      
   .flex
     gap: 1rem
     display: flex
     flex-direction: row
-
+    padding-left: 1rem
+    @media (max-width: $breakpoint)
+        padding-left: 0
+        gap: 0
+        justify-content: center
   h1
     font-size: 3rem
     line-height: 1
@@ -63,6 +66,18 @@
         &:hover
           margin: .5rem
 
+  .menu
+    @media (max-width: $breakpoint)
+      position: fixed
+      top: 0
+      left: 0
+      transition: all ease .2s
+      z-index: 10
+      width: 100%
+      opacity: .9
+      background: black
+
+
 .menu li a
   display: inline-block
   margin-left: -1rem
@@ -70,7 +85,8 @@
   border-radius: $rounded-lg
   font-size: 1rem
   transition: transform .2s ease-in-out, background-color .2s ease-in-out
-
+  @media (max-width: $breakpoint)
+    margin: 1rem
   &:hover
     opacity: .9
 

@@ -14521,7 +14521,7 @@ a:where(:link, :visited) {
   .main-layout {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
@@ -14571,6 +14571,8 @@ a:where(:link, :visited) {
 @media (max-width: 1000px) {
   .header-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 .header-container .header {
@@ -14583,13 +14585,20 @@ a:where(:link, :visited) {
   .header-container .header {
     display: block;
     position: unset;
-    padding-top: 3rem;
   }
 }
 .header-container .flex {
   gap: 1rem;
   display: flex;
   flex-direction: row;
+  padding-left: 1rem;
+}
+@media (max-width: 1000px) {
+  .header-container .flex {
+    padding-left: 0;
+    gap: 0;
+    justify-content: center;
+  }
 }
 .header-container h1 {
   font-size: 3rem;
@@ -14636,6 +14645,18 @@ a:where(:link, :visited) {
 .header-container p li a:hover {
   margin: 0.5rem;
 }
+@media (max-width: 1000px) {
+  .header-container .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all ease 0.2s;
+    z-index: 10;
+    width: 100%;
+    opacity: 0.9;
+    background: black;
+  }
+}
 
 .menu li a {
   display: inline-block;
@@ -14644,6 +14665,11 @@ a:where(:link, :visited) {
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+@media (max-width: 1000px) {
+  .menu li a {
+    margin: 1rem;
+  }
 }
 .menu li a:hover {
   opacity: 0.9;
