@@ -1,0 +1,23 @@
+@use '../base/variables' as *
+@use '../base/mixins' as *
+
+// ── Social links ─────────────────────────────────────────────
+.social-links
+  .social-link
+    display: block
+    width: 1.75rem
+    height: 1.75rem
+    color: $color-text-default
+    transition: color .2s ease-in-out, transform .2s ease-in-out
+
+    @media (max-width: $breakpoint)
+      margin-top: 1rem !important
+      justify-content: space-between
+      
+    svg
+      width: 100%
+      height: 100%
+
+    &:hover
+      color: $color-accent
+      transform: translateY(-2px)
