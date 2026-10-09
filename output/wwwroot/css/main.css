@@ -14612,7 +14612,6 @@ a:where(:link, :visited) {
 .section-title {
   display: flex;
   align-items: center;
-  gap: 1rem;
   padding-top: 4rem;
 }
 .section-title h2 {
@@ -14622,7 +14621,7 @@ a:where(:link, :visited) {
   flex: 1;
   height: 1px;
   background-color: currentColor;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .header-title {
