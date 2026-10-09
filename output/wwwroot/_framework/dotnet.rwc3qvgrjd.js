@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "2027_Portfolio",
   "applicationEnvironment": "Production",
   "resources": {
-    "hash": "sha256-7S0S8ib8rfShcAq5MdzcMc2DUfOOqa0n0QvDlIJpXZc=",
+    "hash": "sha256-g5ZBMuzzayCruKXX53zC7eqimiC4psFOVY6viBgu0EI=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.b6l13xorvf.js"
@@ -52,16 +52,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "System.Private.CoreLib.wasm",
-        "name": "System.Private.CoreLib.vyqfnkiaov.wasm",
-        "hash": "sha256-ueIQDbkaBgOTbugGAUJbeLPf3f/s6Zg9PllpppeE6MU=",
+        "name": "System.Private.CoreLib.tlijgldhbt.wasm",
+        "hash": "sha256-8Xi8E6/V05JISIzX0g8YAyjJGBI7pUnFfzRehScdj4k=",
         "cache": "force-cache"
       }
     ],
     "assembly": [
       {
         "virtualPath": "Microsoft.AspNetCore.Components.wasm",
-        "name": "Microsoft.AspNetCore.Components.r9nva4oy6w.wasm",
-        "hash": "sha256-j2E1Z4TQt5g2xKG18ZqdsBVfgdC7P6eW07T23r8ae0k=",
+        "name": "Microsoft.AspNetCore.Components.2rhnhlxrxl.wasm",
+        "hash": "sha256-YlE14ygwVeLjZvrbs0Ax6yszUjqEU+u27ywp2YDHwFA=",
         "cache": "force-cache"
       },
       {
@@ -240,8 +240,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "System.Runtime.wasm",
-        "name": "System.Runtime.5crib6u4rg.wasm",
-        "hash": "sha256-5f0O9y8AiqdWhXlyz/yIURmc4GHz0mmWC6lZKTQpX3U=",
+        "name": "System.Runtime.lrocd5b1mg.wasm",
+        "hash": "sha256-YVnlymPuKcZA5FYpIDrIxio06fY1f9+i/sga6k+CLWc=",
         "cache": "force-cache"
       },
       {
@@ -276,8 +276,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "2027_Portfolio.wasm",
-        "name": "2027_Portfolio.023eqjbv78.wasm",
-        "hash": "sha256-CAPbNcQm0Z3qojvmOHAYqpXZSCnuB1ZkinXGW4RxeDA=",
+        "name": "2027_Portfolio.y06hch5nyv.wasm",
+        "hash": "sha256-wrg1AYu18g071lRMJzKQgbk14BuWneAD3A+VcnNPDeA=",
         "cache": "force-cache"
       }
     ]

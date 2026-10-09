@@ -1,53 +1,54 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Sabella</title>
-    <base href="/" />
-    <link rel="icon" type="image/ico" href="/img/favicon.ico" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
-				  
-    <link rel="stylesheet" href="./css/main.css" />
-	<link href="_framework/dotnet.yvvwo4ooze.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-km5MnvaScZeH1jhX7fC7zycF4qW99q8TC6usWhogspM=" />
-	<script type="importmap">{
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gabriel Sabella</title>
+		<base href="/" />
+		<link rel="icon" type="image/ico" href="/img/favicon.ico" />
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
+
+		<link rel="stylesheet" href="./css/main.css" />
+		<link href="_framework/dotnet.rwc3qvgrjd.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-5aXg2wEE/2Xq+kZkLya1sO14LQXelqfuEQTCe6IEo4A=" />
+		<script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.b6l13xorvf.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.yvvwo4ooze.js"
+    "./_framework/dotnet.js": "./_framework/dotnet.rwc3qvgrjd.js"
   },
   "scopes": {},
   "integrity": {
     "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
     "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
-    "./_framework/dotnet.js": "sha256-km5MnvaScZeH1jhX7fC7zycF4qW99q8TC6usWhogspM=",
+    "./_framework/dotnet.js": "sha256-5aXg2wEE/2Xq+kZkLya1sO14LQXelqfuEQTCe6IEo4A=",
     "./_framework/dotnet.native.b6l13xorvf.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
     "./_framework/dotnet.native.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
     "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
     "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
-    "./_framework/dotnet.yvvwo4ooze.js": "sha256-km5MnvaScZeH1jhX7fC7zycF4qW99q8TC6usWhogspM="
+    "./_framework/dotnet.rwc3qvgrjd.js": "sha256-5aXg2wEE/2Xq+kZkLya1sO14LQXelqfuEQTCe6IEo4A="
   }
 }</script>
-  </head>
-  <body>
-    <div id="boot-screen">
-      <pre id="boot-log"></pre>
-      <span class="boot-cursor">_</span>
-    </div>
-    <div id="app"></div>
-    <script src="./js/nav.js"></script>
-    <script src="./js/boot.js"></script>
-    <script
-      src="_framework/blazor.webassembly.66stpp682q.js"
-      autostart="false"
+	</head>
+	<body>
+		<div id="boot-screen">
+			<pre id="boot-log"></pre>
+			<span class="boot-cursor">_</span>
+		</div>
+		<div id="app"></div>
+		<script src="./js/nav.js"></script>
+		<script src="./js/header-follow.js"></script>
+		<script src="./js/boot.js"></script>
+		<script
+		  src="_framework/blazor.webassembly.66stpp682q.js"
+		  autostart="false"
     ></script>
-    <script>
-      Blazor.start().then(() => {
-        if (window.__bootReveal) window.__bootReveal();
-      });
-    </script>
-  </body>
+		<script>
+			Blazor.start().then(() => {
+			if (window.__bootReveal) window.__bootReveal();
+			});
+		</script>
+	</body>
 </html>

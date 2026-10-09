@@ -1,0 +1,52 @@
+@inject IJSRuntime JS
+
+<section class="contact relative" id="@Sections.Contact.Id">
+	<p class="contact-lead leading-relaxed">
+		Hiring, collaborating, or just want to say hi? Email is the fastest way to reach me.
+	</p>
+
+	<div class="contact-actions flex flex-wrap items-center gap-4 pt-8">
+		<a href="mailto:@Email" class="contact-email font-mono">@Email</a>
+		<button type="button" class="contact-copy font-mono btn btn-primary btn-sm rounded-2xl" @onclick="CopyEmail" aria-live="polite">
+			@(_copied ? "Copied ✓" : "Copy")
+		</button>
+	</div>
+
+	<div class="contact-links flex flex-wrap gap-2 pt-8">
+		@if (!string.IsNullOrWhiteSpace(LinkedInUrl))
+		{
+			<a href="@LinkedInUrl" target="_blank" rel="noopener noreferrer"
+			   class="tech-icon contact-pill font-bold text-sm px-4 py-2 rounded-2xl btn-secondary btn-sm">LinkedIn</a>
+		}
+		@if (!string.IsNullOrWhiteSpace(GitHubUrl))
+		{
+			<a href="@GitHubUrl" target="_blank" rel="noopener noreferrer"
+			   class="tech-icon contact-pill font-bold text-sm px-4 py-2 rounded-2xl btn-secondary btn-sm">GitHub</a>
+		}
+	</div>
+</section>
+
+@code {
+	// Leave URL empty to hide that link.
+	private const string Email = "gabe.sabella.dev@gmail.com";
+	private const string LinkedInUrl = "https://www.linkedin.com/in/gabrielsabella/";
+	private const string GitHubUrl = "https://github.com/gabesabella";
+
+	private bool _copied;
+
+	private async Task CopyEmail()
+	{
+		try
+		{
+			await JS.InvokeVoidAsync("navigator.clipboard.writeText", Email);
+			_copied = true;
+			StateHasChanged();
+			await Task.Delay(2000);
+			_copied = false;
+		}
+		catch (JSException)
+		{
+			// Clipboard unavailable (e.g. insecure context); the mailto link still works.
+		}
+	}
+}

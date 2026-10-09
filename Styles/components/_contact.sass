@@ -1,0 +1,29 @@
+@use '../base/variables' as *
+
+.contact
+  padding-bottom: $p-lg
+  @media (max-width: $breakpoint)
+    padding-bottom: $p-md
+
+  .contact-lead
+    font-size: 1.5rem
+    line-height: 3rem
+    padding-top: $spacing-8
+    @media (max-width: $breakpoint)
+      font-size: 1rem
+      line-height: 1.5rem
+      padding-top: $spacing-4
+
+  .contact-email
+    font-size: 1.5rem
+    text-decoration: underline
+    text-underline-offset: 6px
+    text-decoration-color: rgba($color-accent, 0.5)
+    transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out
+    word-break: break-all
+    @media (max-width: $breakpoint)
+      font-size: 1.1rem
+
+    &:hover
+      color: $color-accent
+      text-decoration-color: $color-accent

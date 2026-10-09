@@ -14468,6 +14468,44 @@ img, video {
   color: #0d0a1a;
 }
 
+.contact {
+  padding-bottom: 10rem;
+}
+@media (max-width: 1000px) {
+  .contact {
+    padding-bottom: 4rem;
+  }
+}
+.contact .contact-lead {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding-top: 2rem;
+}
+@media (max-width: 1000px) {
+  .contact .contact-lead {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+.contact .contact-email {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: rgba(170, 221, 136, 0.5);
+  transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
+  word-break: break-all;
+}
+@media (max-width: 1000px) {
+  .contact .contact-email {
+    font-size: 1.1rem;
+  }
+}
+.contact .contact-email:hover {
+  color: rgba(170, 221, 136, 0.8666666667);
+  text-decoration-color: rgba(170, 221, 136, 0.8666666667);
+}
+
 .divider {
   height: 1px;
   background-color: #e5e7eb;
@@ -14613,7 +14651,7 @@ a:where(:link, :visited) {
   .header-container .header {
     display: block;
     position: unset;
-    padding-top: 3rem;
+    padding-top: 2rem;
     flex-direction: row;
   }
 }
@@ -14680,18 +14718,23 @@ a:where(:link, :visited) {
 @media (max-width: 1000px) {
   .header-container .menu {
     margin: 0;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
     transition: all ease 0.2s;
-    z-index: 10;
     width: 100%;
-    opacity: 0.9;
-    background: black;
+    background: #0d0a1a;
+    z-index: 10;
   }
 }
-
-.menu li a {
+@media (max-width: 1000px) {
+  .header-container .menu li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+.header-container .menu li a {
   display: inline-block;
   margin-left: -1rem;
   padding: 0.5rem 1rem;
@@ -14700,11 +14743,11 @@ a:where(:link, :visited) {
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 @media (max-width: 1000px) {
-  .menu li a {
-    margin: 0.25rem 1rem;
-  }
-  .menu li a:hover {
-    opacity: 0.9;
+  .header-container .menu li a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 }
 

@@ -20,9 +20,9 @@
     @media (max-width: $breakpoint)
       display: block
       position: unset
-      padding-top: 3rem
+      padding-top: 2rem // clears the fixed nav bar
       flex-direction: row
-      
+
   .flex
     gap: 1rem
     display: flex
@@ -70,27 +70,37 @@
     margin-top: 1rem
     @media (max-width: $breakpoint)
       margin: 0
+      padding: .5rem 1rem
       position: fixed
       top: 0
       left: 0
       transition: all ease .2s
-      z-index: 10
       width: 100%
-      opacity: .9
-      background: black
-      
+      background: $color-primary
+      z-index: 10
 
-.menu li a
-  display: inline-block
-  margin-left: -1rem
-  padding: .5rem 1rem
-  border-radius: $rounded-lg
-  font-size: 1rem
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out
-  @media (max-width: $breakpoint)
-    margin: .25rem 1rem
-    &:hover
-      opacity: .9
+    // Mobile: split the fixed bar into equal-width cells so the link count
+    // never depends on margin/padding and can't overflow the screen.
+    li
+      @media (max-width: $breakpoint)
+        flex: 1 1 0
+        min-width: 0
+
+    // `li a` is already scoped under .menu by nesting; repeating `.menu` here
+    // would compile to `.header-container .menu .menu li a` and never match.
+    li a
+      display: inline-block
+      margin-left: -1rem
+      padding: .5rem 1rem
+      border-radius: $rounded-lg
+      font-size: 1rem
+      transition: transform .2s ease-in-out, background-color .2s ease-in-out
+      @media (max-width: $breakpoint)
+        display: block
+        margin: 0
+        padding: 0
+        text-align: center
+
 
 .active
   background-color: $color-accent-bg

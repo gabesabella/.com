@@ -1,35 +1,36 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Sabella</title>
-    <base href="/" />
-    <link rel="icon" type="image/ico" href="/img/favicon.ico" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
-				  
-    <link rel="stylesheet" href="./css/main.css" />
-	<link rel="preload" id="webassembly" />
-	<script type="importmap"></script>
-  </head>
-  <body>
-    <div id="boot-screen">
-      <pre id="boot-log"></pre>
-      <span class="boot-cursor">_</span>
-    </div>
-    <div id="app"></div>
-    <script src="./js/nav.js"></script>
-    <script src="./js/boot.js"></script>
-    <script
-      src="_framework/blazor.webassembly#[.{fingerprint}].js"
-      autostart="false"
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gabriel Sabella</title>
+		<base href="/" />
+		<link rel="icon" type="image/ico" href="/img/favicon.ico" />
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
+
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="preload" id="webassembly" />
+		<script type="importmap"></script>
+	</head>
+	<body>
+		<div id="boot-screen">
+			<pre id="boot-log"></pre>
+			<span class="boot-cursor">_</span>
+		</div>
+		<div id="app"></div>
+		<script src="./js/nav.js"></script>
+		<script src="./js/header-follow.js"></script>
+		<script src="./js/boot.js"></script>
+		<script
+		  src="_framework/blazor.webassembly#[.{fingerprint}].js"
+		  autostart="false"
     ></script>
-    <script>
-      Blazor.start().then(() => {
-        if (window.__bootReveal) window.__bootReveal();
-      });
-    </script>
-  </body>
+		<script>
+			Blazor.start().then(() => {
+			if (window.__bootReveal) window.__bootReveal();
+			});
+		</script>
+	</body>
 </html>

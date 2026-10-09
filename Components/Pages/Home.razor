@@ -9,6 +9,8 @@
             <Experience />
             <SectionTitle Title="@Sections.Projects.Label" />
             <Projects />
+            <SectionTitle Title="@Sections.Contact.Label" />
+            <Contact />
             <BuiltWith />
         </main>
     </div>
@@ -21,6 +23,7 @@
         {
             var ids = Sections.All.Select(s => s.Id).ToArray();
             await JS.InvokeVoidAsync("observeSections", ids);
+            await JS.InvokeVoidAsync("followSection", ".header", ".contact-lead");
         }
     }
 }

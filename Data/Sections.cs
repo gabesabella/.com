@@ -8,5 +8,7 @@ public static class Sections
     public static readonly NavSection Experience = new("experience", "Experience");
     public static readonly NavSection Projects = new("projects", "Projects");
 
-    public static readonly NavSection[] All = [Intro, Experience, Projects];
+    public static readonly NavSection Contact = new("contact", "Contact");
+
+    public static readonly NavSection[] All = [Intro, Experience, Projects, Contact];
 }
