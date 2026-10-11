@@ -14469,12 +14469,30 @@ img, video {
 }
 
 .contact {
-  padding-bottom: 10rem;
+  padding-bottom: 4rem;
+}
+.contact .contact-photo {
+  max-width: 20rem;
 }
 @media (max-width: 1000px) {
-  .contact {
-    padding-bottom: 4rem;
+  .contact .contact-photo {
+    max-width: 14rem;
   }
+}
+.contact .contact-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1rem;
+  border: 1px solid rgba(170, 221, 136, 0.25);
+  filter: grayscale(0.4) contrast(1.05);
+  transition: filter 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.contact .contact-photo:hover img {
+  filter: none;
+  border-color: rgba(170, 221, 136, 0.6);
 }
 .contact .contact-lead {
   font-size: 1.5rem;
@@ -14604,7 +14622,6 @@ a:where(:link, :visited) {
 .built-with {
   display: flex;
   place-items: center;
-  margin-top: 5rem;
   font-size: 1.2rem;
   font-family: monospace;
 }

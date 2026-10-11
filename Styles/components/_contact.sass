@@ -1,10 +1,28 @@
 @use '../base/variables' as *
 
 .contact
-  padding-bottom: $p-lg
-  @media (max-width: $breakpoint)
-    padding-bottom: $p-md
+  padding-bottom: $p-md
 
+  .contact-photo
+    max-width: 20rem   // about 26.7rem tall at 3:4
+    @media (max-width: $breakpoint)
+      max-width: 14rem
+
+    img
+      width: 100%
+      height: auto
+      aspect-ratio: 1/1
+      object-fit: cover
+      object-position: center top
+      // ...keep the border-radius /
+      border-radius: $rounded-2xl
+      border: 1px solid rgba($color-accent, 0.25)
+      filter: grayscale(0.4) contrast(1.05)
+      transition: filter .3s ease-in-out, border-color .3s ease-in-out
+
+    &:hover img
+      filter: none
+      border-color: rgba($color-accent, 0.6)
   .contact-lead
     font-size: 1.5rem
     line-height: 3rem
