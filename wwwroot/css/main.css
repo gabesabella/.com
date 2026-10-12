@@ -14480,18 +14480,18 @@ img, video {
   }
 }
 .contact .contact-photo img {
-  width: 100%;
+  width: 83%;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center top;
-  border-radius: 1rem;
+  border-radius: 100%;
   border: 1px solid rgba(170, 221, 136, 0.25);
-  filter: grayscale(0.4) contrast(1.05);
   transition: filter 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  filter: grayscale(0.2) contrast(1.4);
 }
 .contact .contact-photo:hover img {
-  filter: none;
+  filter: grayscale(0.1) contrast(1.5);
   border-color: rgba(170, 221, 136, 0.6);
 }
 .contact .contact-lead {

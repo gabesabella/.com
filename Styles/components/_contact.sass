@@ -9,19 +9,18 @@
       max-width: 14rem
 
     img
-      width: 100%
+      width: 83%
       height: auto
       aspect-ratio: 1/1
       object-fit: cover
       object-position: center top
-      // ...keep the border-radius /
-      border-radius: $rounded-2xl
+      border-radius: 100%
       border: 1px solid rgba($color-accent, 0.25)
-      filter: grayscale(0.4) contrast(1.05)
       transition: filter .3s ease-in-out, border-color .3s ease-in-out
+      filter: grayscale(0.2) contrast(1.4)
 
     &:hover img
-      filter: none
+      filter: grayscale(0.1) contrast(1.5)
       border-color: rgba($color-accent, 0.6)
   .contact-lead
     font-size: 1.5rem

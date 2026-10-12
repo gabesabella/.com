@@ -14,9 +14,9 @@ public static class PortfolioData
             "Built and maintained .NET integrations for enterprise exhibitors at live events (up to 100k attendees, 110+ countries). Led incident response when a live integration failed mid-event, working directly with the exhibitor's manager through resolution.",
             [".NET/C#", "SQL Server"]),
 
-        new("2022—2023", "Freelance Web Developer",
-            "Worked directly with clients to build and upgrade their websites. Some of these items are showcased in the projects section.",
-            ["React", "SCSS", "Responsive Design"]),
+        //new("2022—2023", "Freelance Web Developer",
+        //    "Worked directly with clients to build and upgrade their websites. Some of these items are showcased in the projects section.",
+        //    ["React", "SCSS", "Responsive Design"]),
 
         new("2020—2022", "Bachelor of Science in Computer Science — WGU",
             "Learned theory, mathematical foundations, data structures and algorithms, and technical execution of computing and software systems.",
@@ -45,21 +45,21 @@ public static class PortfolioData
             Description: "First version of this portfolio, built with React, Tailwind, and TypeScript. Designed to be a fast, responsive, and visually appealing showcase of my work.",
             Tech: ["React", "Tailwind CSS", "TypeScript", "Email.JS"],
             Image: "/img/portfolio-v1.png", Url: "https://gabesabella-dev.vercel.app/"),
-
         
-        new(Title: "Obligatory TODO App",
-            Description: "Easily the cleanest TODO app of this century. You can add things, AND mark them as complete. Pretty cutting edge stuff.",
-            Tech: ["React", "TypeScript", "Tailwind CSS"],
-            Image: "/img/todo.png", Url: "https://todo-pi-nine.vercel.app/"),
+        //new(Title: "Obligatory TODO App",
+        //    Description: "Easily the cleanest TODO app of this century. You can add things, AND mark them as complete. Pretty cutting edge stuff.",
+        //    Tech: ["React", "TypeScript", "Tailwind CSS"],
+        //    Image: "/img/todo.png", Url: "https://todo-pi-nine.vercel.app/"),
 
-        new(Title: "CSS-Only Resume",
-            Description: "Early project, back when experience sliders were all the rage. Helped build understanding of web design fundamentals.",
-            Tech: ["HTML", "CSS"],
-            Image: "/img/oldschool.png", Url: "https://gabesresume.vercel.app/"),
+        //new(Title: "CSS-Only Resume",
+        //    Description: "Early project, back when experience sliders were all the rage. Helped build understanding of web design fundamentals.",
+        //    Tech: ["HTML", "CSS"],
+        //    Image: "/img/oldschool.png", Url: "https://gabesresume.vercel.app/"),
 
-        new(Title: "RightFlight",
-            Description: "UI-only workshop project — no backend, built purely to practice layout, spacing, and visual design decisions in HTML/CSS.",
-            Tech: ["HTML", "CSS"],
-            Image: "/img/rightflight.png", Url: "https://rightflight.vercel.app/"),
+        //new(Title: "RightFlight",
+        //    Description: "UI-only workshop project — no backend, built purely to practice layout, spacing, and visual design decisions in HTML/CSS.",
+        //    Tech: ["HTML", "CSS"],
+        //    Image: "/img/rightflight.png", Url: "https://rightflight.vercel.app/"),
+
     ];
 }
