@@ -27,10 +27,8 @@
     gap: 1rem
     display: flex
     flex-direction: row
-    padding-left: 1rem
     @media (max-width: $breakpoint)
-        padding-left: 0
-        gap: 0
+        gap: .2rem
         justify-content: space-between
   h1
     font-size: 3rem
@@ -61,10 +59,6 @@
       a
         border-radius: .5rem
         transition: margin .2s ease-in-out
-        &:active
-          margin: 0 1.5rem
-        &:hover
-          margin: .5rem
 
   .menu
     margin-top: 1rem
@@ -90,11 +84,9 @@
     // would compile to `.header-container .menu .menu li a` and never match.
     li a
       display: inline-block
-      margin-left: -1rem
-      padding: .5rem 1rem
       border-radius: $rounded-lg
       font-size: 1rem
-      transition: transform .2s ease-in-out, background-color .2s ease-in-out
+      transition: padding .2s ease
       @media (max-width: $breakpoint)
         display: block
         margin: 0
@@ -106,9 +98,8 @@
   background-color: $color-accent-bg
   color: $color-accent
   border: 2px solid $color-accent
-  margin: 0 1rem
   font-weight: 600
-  transition: all .2s ease-in-out
+  padding: .5rem 1rem
 
 .header-title
   display: flex
