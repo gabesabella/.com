@@ -36,4 +36,6 @@
       setTimeout(() => screenEl.remove(), 500);
     }, wait);
   };
+
+  console.log('hello explorer');
 })();

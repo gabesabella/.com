@@ -29,7 +29,7 @@
     flex-direction: row
     @media (max-width: $breakpoint)
         gap: .2rem
-        justify-content: space-between
+        justify-content: space-evenly
   h1
     font-size: 3rem
     line-height: 1
@@ -76,17 +76,17 @@
     // Mobile: split the fixed bar into equal-width cells so the link count
     // never depends on margin/padding and can't overflow the screen.
     li
+      height: 2rem 
       @media (max-width: $breakpoint)
         flex: 1 1 0
         min-width: 0
-
     // `li a` is already scoped under .menu by nesting; repeating `.menu` here
     // would compile to `.header-container .menu .menu li a` and never match.
     li a
       display: inline-block
       border-radius: $rounded-lg
       font-size: 1rem
-      transition: padding .2s ease
+      padding: .5rem 1rem
       @media (max-width: $breakpoint)
         display: block
         margin: 0
@@ -99,8 +99,7 @@
   color: $color-accent
   border: 2px solid $color-accent
   font-weight: 600
-  padding: .5rem 1rem
-
+  transition: background .5s ease
 .header-title
   display: flex
   flex-direction: row

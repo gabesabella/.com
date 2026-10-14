@@ -6,13 +6,17 @@
   background-color: $gray-200
   border: none
   margin: $spacing-4 0
-
+  @media (max-width: $breakpoint)
+    margin: 0 $spacing-2
 .divider-vertical
   width: 1px
   height: 100%
   background-color: $gray-200
   display: inline-block
   margin: 0 $spacing-4
+  @media (max-width: $breakpoint)
+    margin: 0 $spacing-2
+    
 
 // Divider with label
 .divider-label
@@ -21,7 +25,9 @@
   gap: $spacing-4
   color: $gray-500
   font-size: $font-size-sm
-
+  @media (max-width: $breakpoint)
+    margin: 0 $spacing-2
+    
   &::before,
   &::after
     content: ""
