@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "2027_Portfolio",
   "applicationEnvironment": "Production",
   "resources": {
-    "hash": "sha256-MBdKgWefaF49Wsu4PR5SHa17qE8p7nR1bnxKwp3j0LE=",
+    "hash": "sha256-fLjzHtVtrlOLWs3WPgFduTFN/enzbSmjMzm2bFkUjQo=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.b6l13xorvf.js"
@@ -276,8 +276,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "2027_Portfolio.wasm",
-        "name": "2027_Portfolio.rzg4f7rgd5.wasm",
-        "hash": "sha256-+TXm93Tof5vIwbCKj2Tk+vzkSsG3eM5s1vUNH5ggGGs=",
+        "name": "2027_Portfolio.7x4018avz9.wasm",
+        "hash": "sha256-FcZpaozJxiPEdojJtuPhGqIKHq7YoZcbicmN3dbOdc4=",
         "cache": "force-cache"
       }
     ]
